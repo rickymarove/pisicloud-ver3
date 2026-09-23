@@ -1,15 +1,15 @@
-<header class="font-sans bg-white border-2 border-gray-900 rounded-2xl px-6 py-3.5">
-  <div class="flex items-center gap-10">
+<header class="font-sans bg-white rounded-2xl px-6 py-3.5">
+  <div class="relative flex items-center justify-between gap-10">
     <!-- Logo -->
-    <a href="/" class="flex items-center gap-2.5 shrink-0">
+    <a href="/" class="flex items-center shrink-0">
       <img src="/images/pisicloud-logo.svg" alt="PISICloud logo" class="h-8 w-auto" />
-      <span class="text-[22px] font-bold tracking-tight">
-        <span class="text-[#182849]">PISI</span><span class="text-[#e02330]">Cloud</span>
-      </span>
     </a>
 
     <!-- Nav -->
-    <nav class="hidden md:flex items-center gap-8 mx-auto" aria-label="Main navigation">
+    <nav
+      class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8"
+      aria-label="Main navigation"
+    >
       <a
         *ngFor="let link of navLinks"
         [href]="link.href"
@@ -20,7 +20,7 @@
     </nav>
 
     <!-- Right side: language selector + CTA -->
-    <div class="flex items-center gap-4 shrink-0 ml-auto md:ml-0">
+    <div class="flex items-center gap-4 shrink-0">
       <div class="relative">
         <button
           type="button"
@@ -56,7 +56,7 @@
 
       <button
         type="button"
-        class="rounded-[10px] bg-[#6d4552] px-5.5 py-3 text-[15px] font-bold text-white hover:bg-[#5c3a45]"
+        class="rounded-[10px] bg-[#6d4552] px-5.5 py-3 text-[15px] font-semibold text-white hover:bg-[#5c3a45]"
         (click)="onScheduleDemo()"
       >
         Jadwalkan Demo
