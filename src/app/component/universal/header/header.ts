@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -15,6 +15,7 @@ export class HeaderComponent {
   ];
 
   isLangMenuOpen = false;
+  isMobileMenuOpen = false;
 
   languages = [
     { code: 'EN', label: 'English', flag: '🇬🇧' },
@@ -29,6 +30,21 @@ export class HeaderComponent {
 
   selectLang(lang: (typeof this.languages)[number]): void {
     this.selectedLang = lang;
+    this.isLangMenuOpen = false;
+  }
+
+  toggleMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    this.isLangMenuOpen = false;
+  }
+
+  closeMobileMenu(): void {
+    this.isMobileMenuOpen = false;
+  }
+
+  @HostListener('document:keydown.escape')
+  closeMenus(): void {
+    this.isMobileMenuOpen = false;
     this.isLangMenuOpen = false;
   }
 
