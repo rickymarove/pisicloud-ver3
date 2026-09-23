@@ -1,11 +1,12 @@
-<header class="font-sans bg-white rounded-2xl px-6 py-3.5">
-  <div class="relative flex items-center justify-between gap-10">
+<header class="w-full bg-white font-sans py-3.5 shadow-sm">
+  <!-- Inner container: constrains content width and adds breathing space -->
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative flex items-center justify-between gap-10">
     <!-- Logo -->
     <a href="/" class="flex items-center shrink-0">
       <img src="/images/pisicloud-logo.svg" alt="PISICloud logo" class="h-8 w-auto" />
     </a>
 
-    <!-- Nav -->
+    <!-- Centered Navigation -->
     <nav
       class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8"
       aria-label="Main navigation"
@@ -13,7 +14,7 @@
       <a
         *ngFor="let link of navLinks"
         [href]="link.href"
-        class="text-[15px] font-bold text-[#182849] hover:opacity-75"
+        class="text-[15px] font-bold text-[#182849] transition-opacity hover:opacity-75"
       >
         {{ link.label }}
       </a>
@@ -24,7 +25,7 @@
       <div class="relative">
         <button
           type="button"
-          class="flex items-center gap-1.5 p-1 text-[15px] font-bold text-[#182849]"
+          class="flex items-center gap-1.5 p-1 text-[15px] font-bold text-[#182849] transition-opacity hover:opacity-80"
           (click)="toggleLangMenu()"
           [attr.aria-expanded]="isLangMenuOpen"
         >
@@ -56,7 +57,7 @@
 
       <button
         type="button"
-        class="rounded-[10px] bg-[#6d4552] px-5.5 py-3 text-[15px] font-semibold text-white hover:bg-[#5c3a45]"
+        class="rounded-[10px] bg-[#6d4552] px-5.5 py-3 text-[15px] font-semibold text-white transition-colors hover:bg-[#5c3a45]"
         (click)="onScheduleDemo()"
       >
         Jadwalkan Demo
