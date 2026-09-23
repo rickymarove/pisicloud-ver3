@@ -1,0 +1,66 @@
+<header class="font-sans bg-white border-2 border-gray-900 rounded-2xl px-6 py-3.5">
+  <div class="flex items-center gap-10">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2.5 shrink-0">
+      <img src="/images/pisicloud-logo.svg" alt="PISICloud logo" class="h-8 w-auto" />
+      <span class="text-[22px] font-bold tracking-tight">
+        <span class="text-[#182849]">PISI</span><span class="text-[#e02330]">Cloud</span>
+      </span>
+    </a>
+
+    <!-- Nav -->
+    <nav class="hidden md:flex items-center gap-8 mx-auto" aria-label="Main navigation">
+      <a
+        *ngFor="let link of navLinks"
+        [href]="link.href"
+        class="text-[15px] font-bold text-[#182849] hover:opacity-75"
+      >
+        {{ link.label }}
+      </a>
+    </nav>
+
+    <!-- Right side: language selector + CTA -->
+    <div class="flex items-center gap-4 shrink-0 ml-auto md:ml-0">
+      <div class="relative">
+        <button
+          type="button"
+          class="flex items-center gap-1.5 p-1 text-[15px] font-bold text-[#182849]"
+          (click)="toggleLangMenu()"
+          [attr.aria-expanded]="isLangMenuOpen"
+        >
+          <span class="text-lg leading-none">{{ selectedLang.flag }}</span>
+          <span>{{ selectedLang.code }}</span>
+          <svg class="w-2.5 h-1.5" viewBox="0 0 10 6" fill="none">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <ul
+          *ngIf="isLangMenuOpen"
+          class="absolute right-0 top-[calc(100%+8px)] z-20 min-w-[170px] rounded-lg border border-gray-200 bg-white p-1.5 shadow-lg"
+        >
+          <li *ngFor="let lang of languages">
+            <button
+              type="button"
+              class="flex w-full items-center gap-2 rounded-md px-2.5 py-2 text-left text-sm text-[#182849] hover:bg-gray-100"
+              (click)="selectLang(lang)"
+            >
+              <span class="text-base leading-none">{{ lang.flag }}</span>
+              <span>{{ lang.label }}</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <span class="h-6 w-px bg-gray-300" aria-hidden="true"></span>
+
+      <button
+        type="button"
+        class="rounded-[10px] bg-[#6d4552] px-5.5 py-3 text-[15px] font-bold text-white hover:bg-[#5c3a45]"
+        (click)="onScheduleDemo()"
+      >
+        Jadwalkan Demo
+      </button>
+    </div>
+  </div>
+</header>
