@@ -5,6 +5,6 @@
 @import "@fontsource-variable/dm-sans";
 
 @theme {
-  --font-sans: "Inter", sans-serif;
-  --font-display: "DM Sans", sans-serif;
+  --font-sans: "Twemoji Country Flags", "Inter", sans-serif;
+  --font-display: "Twemoji Country Flags", "DM Sans", sans-serif;
 }
