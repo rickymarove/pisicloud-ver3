@@ -1,6 +1,7 @@
 import { inject, Injectable, PLATFORM_ID, signal } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
+import { firstValueFrom } from 'rxjs';
 
 export interface LanguageOption {
   code: string;
@@ -33,25 +34,44 @@ export class LanguageService {
   constructor() {
     this.translate.addLangs(this.languages.map((l) => l.langKey));
     this.translate.setFallbackLang(DEFAULT_LANGUAGE.langKey);
+  }
 
+  async init(): Promise<void> {
     let initialLangKey = DEFAULT_LANGUAGE.langKey;
     const savedLang = this.getStoredLang();
     if (savedLang && this.languages.some((l) => l.langKey === savedLang)) {
       initialLangKey = savedLang;
     }
 
-    this.setLanguage(initialLangKey);
+    const target = this.findLanguageOption(initialLangKey);
+    this.currentLanguage.set(target);
+
+    try {
+      await firstValueFrom(this.translate.use(target.langKey));
+    } catch (error) {
+      console.error(`Failed to load translations for ${target.langKey}:`, error);
+    }
   }
 
   setLanguage(lang: LanguageOption | string): void {
-    const target =
-      typeof lang === 'string'
-        ? this.languages.find((l) => l.langKey.toLowerCase() === lang.toLowerCase() || l.code.toLowerCase() === lang.toLowerCase()) || DEFAULT_LANGUAGE
-        : lang;
+    const target = this.findLanguageOption(lang);
 
     this.currentLanguage.set(target);
     this.translate.use(target.langKey);
     this.setStoredLang(target.langKey);
+  }
+
+  private findLanguageOption(lang: LanguageOption | string): LanguageOption {
+    if (typeof lang !== 'string') {
+      return lang;
+    }
+    return (
+      this.languages.find(
+        (l) =>
+          l.langKey.toLowerCase() === lang.toLowerCase() ||
+          l.code.toLowerCase() === lang.toLowerCase(),
+      ) || DEFAULT_LANGUAGE
+    );
   }
 
   private getStoredLang(): string | null {

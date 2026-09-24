@@ -1,7 +1,9 @@
+import { inject, provideAppInitializer } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { provideHttpClient } from '@angular/common/http';
 import { provideTranslateService } from '@ngx-translate/core';
 import { App } from './app';
+import { LanguageService } from './core/services/language.service';
 
 describe('App', () => {
   beforeEach(async () => {
@@ -10,6 +12,8 @@ describe('App', () => {
       providers: [
         provideHttpClient(),
         provideTranslateService({ fallbackLang: 'en', lang: 'en' }),
+        LanguageService,
+        provideAppInitializer(() => inject(LanguageService).init()),
       ],
     }).compileComponents();
   });

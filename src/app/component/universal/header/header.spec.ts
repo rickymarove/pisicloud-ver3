@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { inject, provideAppInitializer } from '@angular/core';
 import { provideTranslateService } from '@ngx-translate/core';
 import { HeaderComponent } from './header';
 import { LanguageService } from '../../../core/services/language.service';
@@ -13,6 +14,7 @@ describe('HeaderComponent', () => {
       providers: [
         provideTranslateService({ fallbackLang: 'en', lang: 'en' }),
         LanguageService,
+        provideAppInitializer(() => inject(LanguageService).init()),
       ],
     }).compileComponents();
 
