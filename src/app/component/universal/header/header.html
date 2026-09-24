@@ -110,7 +110,7 @@
 
     <button
       type="button"
-      class="w-full rounded-[10px] bg-[#6d4552] px-5.5 py-3 text-[15px] font-semibold text-white transition-colors hover:bg-[#5c3a45] md:w-auto"
+      class="w-full rounded-[10px] bg-linear-to-r from-[#6d4552] to-[#8e5e6e] px-5.5 py-2 text-[15px] font-semibold text-white shadow-xs transition-all duration-200 hover:from-[#5c3a45] hover:to-[#7b4f5d] hover:shadow-sm active:scale-[0.98] md:w-auto"
       (click)="onScheduleDemo(); closeMobileMenu()"
     >
       {{ 'HEADER.ACTIONS.SCHEDULE_DEMO' | translate }}
