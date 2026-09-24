@@ -1,4 +1,4 @@
-import { Component, HostListener, inject } from '@angular/core';
+import { Component, ElementRef, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
 import { LanguageOption, LanguageService } from '../../../core/services/language.service';
@@ -10,6 +10,7 @@ import { LanguageOption, LanguageService } from '../../../core/services/language
   templateUrl: './header.html',
 })
 export class HeaderComponent {
+  private readonly elementRef = inject(ElementRef);
   private readonly languageService = inject(LanguageService);
 
   navLinks = [
@@ -29,7 +30,8 @@ export class HeaderComponent {
     return this.languageService.currentLanguage();
   }
 
-  toggleLangMenu(): void {
+  toggleLangMenu(event?: MouseEvent): void {
+    event?.stopPropagation();
     this.isLangMenuOpen = !this.isLangMenuOpen;
   }
 
@@ -47,6 +49,13 @@ export class HeaderComponent {
     this.isMobileMenuOpen = false;
   }
 
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent): void {
+    if (this.isLangMenuOpen && !this.elementRef.nativeElement.contains(event.target)) {
+      this.isLangMenuOpen = false;
+    }
+  }
+
   @HostListener('document:keydown.escape')
   closeMenus(): void {
     this.isMobileMenuOpen = false;
@@ -57,3 +66,4 @@ export class HeaderComponent {
     // TODO: hook up to actual demo scheduling flow
   }
 }
+

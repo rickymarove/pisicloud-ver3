@@ -1,7 +1,14 @@
 <header class="w-full bg-white font-sans py-3.5 shadow-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative flex items-center justify-between gap-4 md:gap-10">
     <a href="/" class="flex items-center shrink-0">
-      <img src="/images/pisicloud-logo.svg" alt="PISICloud logo" class="h-8 w-auto" />
+      <img
+        src="/images/pisicloud-logo.svg"
+        alt="PISICloud logo"
+        width="173"
+        height="35"
+        fetchpriority="high"
+        class="h-8 w-auto"
+      />
     </a>
 
     <nav
@@ -68,42 +75,69 @@
   </div>
 
   <ng-template #headerActions>
-    <div class="relative">
+    <div class="relative inline-block text-left">
       <button
         type="button"
-        class="inline-flex min-h-11 items-center gap-1.5 p-1 text-[15px] font-bold text-[#182849] transition-opacity hover:opacity-80"
-        (click)="toggleLangMenu()"
+        class="inline-flex h-9.5 items-center gap-2 rounded-full border border-gray-200/90 bg-gray-50/70 px-3 py-1.5 text-[13px] font-semibold tracking-wide text-[#182849] shadow-2xs transition-all duration-200 hover:border-gray-300 hover:bg-gray-100/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6d4552] motion-reduce:transition-none"
+        (click)="toggleLangMenu($event)"
         [attr.aria-expanded]="isLangMenuOpen"
+        aria-haspopup="listbox"
+        [attr.aria-label]="('LANGUAGES.' + selectedLang.code) | translate"
       >
-        <span class="text-lg leading-none">{{ selectedLang.flag }}</span>
+        <span class="text-base leading-none" aria-hidden="true">{{ selectedLang.flag }}</span>
         <span>{{ selectedLang.code }}</span>
-        <svg class="w-2.5 h-1.5" viewBox="0 0 10 6" fill="none">
-          <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <svg
+          class="h-3 w-3 text-[#182849]/60 transition-transform duration-200 motion-reduce:transition-none"
+          [class.rotate-180]="isLangMenuOpen"
+          viewBox="0 0 12 12"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </button>
 
       <ul
         *ngIf="isLangMenuOpen"
-        class="absolute right-0 top-[calc(100%+8px)] z-20 min-w-42.5 rounded-lg border border-gray-200 bg-white p-1.5 shadow-lg"
+        role="listbox"
+        class="absolute right-0 top-[calc(100%+8px)] z-30 w-52 rounded-2xl border border-gray-100/90 bg-white/95 p-1.5 shadow-[0_12px_36px_-6px_rgba(24,40,73,0.12),0_4px_12px_-2px_rgba(24,40,73,0.06)] ring-1 ring-black/4 backdrop-blur-md"
       >
-        <li *ngFor="let lang of languages">
+        <li *ngFor="let lang of languages" role="none">
           <button
             type="button"
-            class="flex w-full items-center gap-2 rounded-md px-2.5 py-2 text-left text-sm text-[#182849] hover:bg-gray-100"
+            role="option"
+            [attr.aria-selected]="selectedLang.code === lang.code"
+            class="group flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-sm font-medium transition-all duration-150"
+            [ngClass]="
+              selectedLang.code === lang.code
+                ? 'bg-[#6d4552]/8 text-[#6d4552] font-semibold'
+                : 'text-[#182849] hover:bg-gray-100/80 active:bg-gray-200/60'
+            "
             (click)="selectLang(lang)"
           >
-            <span class="text-base leading-none">{{ lang.flag }}</span>
-            <span>{{ lang.label }}</span>
+            <span class="flex items-center gap-2.5 min-w-0">
+              <span class="text-base leading-none" aria-hidden="true">{{ lang.flag }}</span>
+              <span class="truncate whitespace-nowrap">{{ lang.label }}</span>
+            </span>
+            <svg
+              *ngIf="selectedLang.code === lang.code"
+              class="h-4 w-4 shrink-0 text-[#6d4552]"
+              viewBox="0 0 16 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path d="M13.25 4.75L6 12L2.75 8.75" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </button>
         </li>
       </ul>
     </div>
 
-    <span class="hidden md:block h-6 w-px bg-gray-300" aria-hidden="true"></span>
+    <span class="hidden md:block h-6 w-px bg-gray-200" aria-hidden="true"></span>
 
     <button
       type="button"
-      class="w-full rounded-[10px] bg-[#6d4552] px-5.5 py-3 text-[15px] font-semibold text-white transition-colors hover:bg-[#5c3a45] md:w-auto"
+      class="w-full rounded-[10px] bg-linear-to-r from-[#6d4552] to-[#8e5e6e] px-5.5 py-2 text-[15px] font-semibold text-white shadow-xs transition-all duration-200 hover:from-[#5c3a45] hover:to-[#7b4f5d] hover:shadow-sm active:scale-[0.98] md:w-auto"
       (click)="onScheduleDemo(); closeMobileMenu()"
     >
       {{ 'HEADER.ACTIONS.SCHEDULE_DEMO' | translate }}

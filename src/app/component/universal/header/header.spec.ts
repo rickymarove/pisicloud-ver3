@@ -117,4 +117,30 @@ describe('HeaderComponent', () => {
     expect(langToggle.textContent).toContain('🇮🇩');
     expect(langToggle.textContent).toContain('ID');
   });
+
+  it('closes the language menu when clicking outside the component', () => {
+    const langToggle = fixture.nativeElement.querySelector('.hidden.md\\:flex button[aria-expanded]') as HTMLButtonElement;
+    langToggle.click();
+    fixture.detectChanges();
+    expect(component.isLangMenuOpen).toBe(true);
+
+    const outsideElement = document.createElement('div');
+    document.body.appendChild(outsideElement);
+    outsideElement.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    fixture.detectChanges();
+
+    expect(component.isLangMenuOpen).toBe(false);
+    document.body.removeChild(outsideElement);
+  });
+
+  it('marks current language option as selected in accessibility tree', () => {
+    const langToggle = fixture.nativeElement.querySelector('.hidden.md\\:flex button[aria-expanded]') as HTMLButtonElement;
+    langToggle.click();
+    fixture.detectChanges();
+
+    const menuItems = fixture.nativeElement.querySelectorAll('.hidden.md\\:flex ul li button');
+    expect(menuItems[0].getAttribute('aria-selected')).toBe('true');
+    expect(menuItems[1].getAttribute('aria-selected')).toBe('false');
+  });
 });
+
