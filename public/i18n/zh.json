@@ -1,0 +1,28 @@
+{
+  "HEADER": {
+    "NAV": {
+      "FEATURES": "功能",
+      "RESOURCES": "资源",
+      "SUPPORT": "支持"
+    },
+    "ACTIONS": {
+      "SCHEDULE_DEMO": "预约演示"
+    },
+    "ARIA": {
+      "MAIN_NAV": "主导航",
+      "MOBILE_NAV": "移动端导航",
+      "OPEN_MENU": "打开菜单",
+      "CLOSE_MENU": "关闭菜单"
+    }
+  },
+  "LANGUAGES": {
+    "EN": "English",
+    "ID": "Bahasa Indonesia",
+    "JA": "日本語",
+    "KO": "한국어",
+    "ZH": "中文"
+  },
+  "COMMON": {
+    "APP_NAME": "PISICloud"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "HEADER": {
+    "NAV": {
+      "FEATURES": "기능",
+      "RESOURCES": "리소스",
+      "SUPPORT": "지원"
+    },
+    "ACTIONS": {
+      "SCHEDULE_DEMO": "데모 예약"
+    },
+    "ARIA": {
+      "MAIN_NAV": "메인 내비게이션",
+      "MOBILE_NAV": "모바일 내비게이션",
+      "OPEN_MENU": "메뉴 열기",
+      "CLOSE_MENU": "메뉴 닫기"
+    }
+  },
+  "LANGUAGES": {
+    "EN": "English",
+    "ID": "Bahasa Indonesia",
+    "JA": "日本語",
+    "KO": "한국어",
+    "ZH": "中文"
+  },
+  "COMMON": {
+    "APP_NAME": "PISICloud"
+  }
+}
