@@ -1,35 +1,40 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
+import { LanguageOption, LanguageService } from '../../../core/services/language.service';
 
 @Component({
   selector: 'universal-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './header.html',
 })
 export class HeaderComponent {
+  private readonly languageService = inject(LanguageService);
+
   navLinks = [
-    { label: 'Features', href: '#features' },
-    { label: 'Resources', href: '#resources' },
-    { label: 'Support', href: '#support' },
+    { key: 'HEADER.NAV.FEATURES', href: '#features' },
+    { key: 'HEADER.NAV.RESOURCES', href: '#resources' },
+    { key: 'HEADER.NAV.SUPPORT', href: '#support' },
   ];
 
   isLangMenuOpen = false;
   isMobileMenuOpen = false;
 
-  languages = [
-    { code: 'EN', label: 'English', flag: '🇬🇧' },
-    { code: 'ID', label: 'Bahasa Indonesia', flag: '🇮🇩' },
-  ];
+  get languages(): LanguageOption[] {
+    return this.languageService.languages;
+  }
 
-  selectedLang = this.languages[0];
+  get selectedLang(): LanguageOption {
+    return this.languageService.currentLanguage();
+  }
 
   toggleLangMenu(): void {
     this.isLangMenuOpen = !this.isLangMenuOpen;
   }
 
-  selectLang(lang: (typeof this.languages)[number]): void {
-    this.selectedLang = lang;
+  selectLang(lang: LanguageOption): void {
+    this.languageService.setLanguage(lang);
     this.isLangMenuOpen = false;
   }
 
