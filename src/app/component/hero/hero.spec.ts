@@ -126,4 +126,9 @@ describe('HeroComponent', () => {
     expect(primaryBtn.textContent?.trim()).toBe('Contact Us');
     expect(secondaryBtn.textContent?.trim()).toBe('Watch Video');
   });
+
+  it('renders the UI mockup component within the hero section', () => {
+    const mockup = fixture.nativeElement.querySelector('app-ui-mockup');
+    expect(mockup).toBeTruthy();
+  });
 });
