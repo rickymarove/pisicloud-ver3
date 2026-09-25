@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { inject, provideAppInitializer } from '@angular/core';
 import { provideTranslateService, TranslateService } from '@ngx-translate/core';
 import { HeroComponent } from './hero';
-import { LanguageService } from '../../core/services/language.service';
+import { LanguageService } from '../../../core/services/language.service';
 
 describe('HeroComponent', () => {
   let component: HeroComponent;
