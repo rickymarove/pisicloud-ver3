@@ -1,228 +1,228 @@
 <div class="w-full max-w-6xl mx-auto">
-  <div class="overflow-x-auto pb-4 pt-1 px-1 -mx-1">
-    <!-- UI Mockup Window / Card -->
-    <div
-      class="min-w-[840px] lg:min-w-full bg-white rounded-2xl md:rounded-[22px] border border-gray-200/80 shadow-[0_24px_50px_-12px_rgba(14,108,94,0.12),0_4px_16px_-2px_rgba(0,0,0,0.04)] overflow-hidden font-sans select-none"
-    >
-      <!-- Mockup Top Bar -->
-      <header class="flex items-center justify-between px-5 py-3 border-b border-gray-100 bg-white">
-        <!-- Logo -->
-        <div class="flex items-center">
-          <img
-            src="/images/pisicloud-logo.svg"
-            alt="PISICloud logo"
-            width="128"
-            height="26"
-            class="h-6 sm:h-6.5 w-auto"
-          />
-        </div>
-
-        <!-- Center Badge -->
-        <div
-          class="inline-flex items-center justify-center px-4 py-1 rounded-full bg-[#0B4D46] text-white text-[11px] font-medium tracking-wide shadow-2xs"
-        >
-          Management Overview
-        </div>
-
-        <!-- Right Info Badge -->
-        <div
-          class="flex items-center justify-center w-5.5 h-5.5 rounded-full bg-[#0B4D46] text-white font-serif font-bold text-[11px] shadow-2xs"
-          aria-label="Info"
-        >
-          i
-        </div>
-      </header>
-
-      <!-- Mockup Body (Sidebar + Content) -->
-      <div class="flex items-stretch bg-white">
-        <!-- Left Sidebar Navigation -->
-        <aside class="w-44 shrink-0 border-r border-gray-100 py-3 px-3 flex flex-col space-y-1 bg-white">
-          <div
-            *ngFor="let item of navItems"
-            class="flex items-center gap-2.5 px-3 py-1.5 rounded-md text-xs font-medium transition-colors"
-            [ngClass]="{
-              'bg-[#E3F5EE] text-[#0B4D46] font-semibold': item.active,
-              'text-gray-500 hover:text-gray-800 hover:bg-gray-50': !item.active
-            }"
-          >
-            <!-- Checkbox/square icon indicator -->
-            <span
-              *ngIf="!item.active"
-              class="w-3.5 h-3.5 rounded-[3px] border border-gray-300 inline-block shrink-0"
-              aria-hidden="true"
-            ></span>
-            <span
-              *ngIf="item.active"
-              class="w-3.5 h-3.5 rounded-[3px] border border-[#0B4D46] flex items-center justify-center shrink-0"
-              aria-hidden="true"
-            >
-              <span class="w-1.5 h-1.5 rounded-[1px] bg-[#0B4D46]"></span>
-            </span>
-            <span>{{ item.name }}</span>
-          </div>
-        </aside>
-
-        <!-- Main Dashboard Viewport -->
-        <main class="flex-1 p-3.5 sm:p-4 bg-[#FAFDFB]/60 space-y-3">
-          <!-- Top Section: 2 Columns -->
-          <div class="grid grid-cols-2 gap-3 sm:gap-3.5">
-            <!-- Left Column: 2 Rows of Metric Cards -->
-            <div class="flex flex-col space-y-3">
-              <!-- Row 1: All Active Employee & New Hire -->
-              <div class="grid grid-cols-5 gap-2.5 sm:gap-3">
-                <!-- All Active Employee (3 cols) -->
-                <div class="col-span-3 bg-white rounded-xl border border-gray-100/90 shadow-2xs flex flex-col overflow-hidden">
-                  <div class="py-2 text-center border-b border-gray-100/80">
-                    <h3 class="text-xs font-semibold text-gray-800">All Active Employee</h3>
-                  </div>
-                  <div class="grid grid-cols-3 divide-x divide-gray-100/80 py-2.5 text-center flex-1 items-center">
-                    <div class="px-1.5">
-                      <div class="text-lg sm:text-xl font-bold text-[#0B4D46]">
-                        {{ activeEmployeeStats.temporary }}
-                      </div>
-                      <div class="text-[10px] text-gray-400 font-medium">Temporary</div>
-                    </div>
-                    <div class="px-1.5">
-                      <div class="text-lg sm:text-xl font-bold text-[#0B4D46]">
-                        {{ activeEmployeeStats.permanent }}
-                      </div>
-                      <div class="text-[10px] text-gray-400 font-medium">Permanent</div>
-                    </div>
-                    <div class="px-1.5">
-                      <div class="text-lg sm:text-xl font-bold text-[#0B4D46]">
-                        {{ activeEmployeeStats.total }}
-                      </div>
-                      <div class="text-[10px] text-gray-400 font-medium">Total</div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- New Hire (2 cols) -->
-                <div class="col-span-2 bg-white rounded-xl border border-gray-100/90 shadow-2xs flex flex-col overflow-hidden">
-                  <div class="py-2 text-center border-b border-gray-100/80">
-                    <h3 class="text-xs font-semibold text-gray-800">New Hire</h3>
-                  </div>
-                  <div class="flex-1 flex items-center justify-center py-2.5">
-                    <div class="text-lg sm:text-xl font-bold text-[#0B4D46]">
-                      {{ newHiresCount }}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Row 2: Employees & Resign -->
-              <div class="grid grid-cols-5 gap-2.5 sm:gap-3">
-                <!-- Employees (3 cols) -->
-                <div class="col-span-3 bg-white rounded-xl border border-gray-100/90 shadow-2xs flex flex-col overflow-hidden">
-                  <div class="py-2 text-center border-b border-gray-100/80">
-                    <h3 class="text-xs font-semibold text-gray-800">Employees</h3>
-                  </div>
-                  <div class="grid grid-cols-2 divide-x divide-gray-100/80 py-2.5 text-center flex-1 items-center">
-                    <div class="px-2">
-                      <div class="text-lg sm:text-xl font-bold text-[#0B4D46]">
-                        {{ genderStats.male }}
-                      </div>
-                      <div class="text-[10px] text-gray-400 font-medium">Male</div>
-                    </div>
-                    <div class="px-2">
-                      <div class="text-lg sm:text-xl font-bold text-[#0B4D46]">
-                        {{ genderStats.female }}
-                      </div>
-                      <div class="text-[10px] text-gray-400 font-medium">Female</div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Resign (2 cols) -->
-                <div class="col-span-2 bg-white rounded-xl border border-gray-100/90 shadow-2xs flex flex-col overflow-hidden">
-                  <div class="py-2 text-center border-b border-gray-100/80">
-                    <h3 class="text-xs font-semibold text-gray-800">Resign</h3>
-                  </div>
-                  <div class="flex-1 flex items-center justify-center py-2.5">
-                    <div class="text-lg sm:text-xl font-bold text-[#0B4D46]">
-                      {{ resignCount }}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right Column: Eoc (End Of Contract) Table -->
-            <div class="bg-white rounded-xl border border-gray-100/90 shadow-2xs p-3 flex flex-col">
-              <h3 class="text-xs font-semibold text-gray-800 mb-2.5">Eoc (End Of Contract)</h3>
-              <div class="rounded-lg overflow-hidden border border-gray-100">
-                <table class="w-full text-left text-xs">
-                  <thead class="bg-[#0B4D46] text-white text-[11px] font-semibold">
-                    <tr>
-                      <th class="px-3 py-1.5 font-semibold">ID</th>
-                      <th class="px-3 py-1.5 font-semibold">Name</th>
-                      <th class="px-3 py-1.5 font-semibold">Resign Date</th>
-                    </tr>
-                  </thead>
-                  <tbody class="divide-y divide-gray-100 text-gray-600 text-[11px]">
-                    <tr *ngFor="let row of contractEndData" class="hover:bg-gray-50/50">
-                      <td class="px-3 py-1.5">{{ row.id }}</td>
-                      <td class="px-3 py-1.5">{{ row.name }}</td>
-                      <td class="px-3 py-1.5">{{ row.resignDate }}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bottom Section: 2 Equal Columns for Document Expired & Consecutive Absences -->
-          <div class="grid grid-cols-2 gap-3 sm:gap-3.5">
-            <!-- Document Expired -->
-            <div class="bg-white rounded-xl border border-gray-100/90 shadow-2xs p-3 flex flex-col">
-              <h3 class="text-xs font-semibold text-gray-800 mb-2.5">Document Expired</h3>
-              <div class="rounded-lg overflow-hidden border border-gray-100">
-                <table class="w-full text-left text-xs">
-                  <thead class="bg-[#0B4D46] text-white text-[11px] font-semibold">
-                    <tr>
-                      <th class="px-3 py-1.5 font-semibold">Employee ID</th>
-                      <th class="px-3 py-1.5 font-semibold">Doc Type</th>
-                      <th class="px-3 py-1.5 font-semibold">Expired Date</th>
-                    </tr>
-                  </thead>
-                  <tbody class="divide-y divide-gray-100 text-gray-600 text-[11px]">
-                    <tr *ngFor="let row of documentExpiredData" class="hover:bg-gray-50/50">
-                      <td class="px-3 py-1.5">{{ row.employeeId }}</td>
-                      <td class="px-3 py-1.5">{{ row.docType }}</td>
-                      <td class="px-3 py-1.5">{{ row.expiredDate }}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <!-- Consecutive Absences with Notice (Days) -->
-            <div class="bg-white rounded-xl border border-gray-100/90 shadow-2xs p-3 flex flex-col">
-              <h3 class="text-xs font-semibold text-gray-800 mb-2.5">
-                Consecutive Absences with Notice (Days)
-              </h3>
-              <div class="rounded-lg overflow-hidden border border-gray-100">
-                <table class="w-full text-left text-xs">
-                  <thead class="bg-[#0B4D46] text-white text-[11px] font-semibold">
-                    <tr>
-                      <th class="px-3 py-1.5 font-semibold">ID</th>
-                      <th class="px-3 py-1.5 font-semibold">Name</th>
-                      <th class="px-3 py-1.5 font-semibold">Resign Date</th>
-                    </tr>
-                  </thead>
-                  <tbody class="divide-y divide-gray-100 text-gray-600 text-[11px]">
-                    <tr *ngFor="let row of consecutiveAbsencesData" class="hover:bg-gray-50/50">
-                      <td class="px-3 py-1.5">{{ row.id }}</td>
-                      <td class="px-3 py-1.5">{{ row.name }}</td>
-                      <td class="px-3 py-1.5">{{ row.resignDate }}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </main>
+  <!-- UI Mockup Window / Card -->
+  <div
+    class="w-full bg-white rounded-xl sm:rounded-2xl md:rounded-[22px] border border-gray-200/80 shadow-[0_20px_45px_-12px_rgba(14,108,94,0.12),0_4px_16px_-2px_rgba(0,0,0,0.04)] overflow-hidden font-sans select-none"
+  >
+    <!-- Mockup Top Bar -->
+    <header class="flex items-center justify-between px-3 py-2.5 sm:px-5 sm:py-3 border-b border-gray-100 bg-white gap-2">
+      <!-- Logo -->
+      <div class="flex items-center shrink-0">
+        <img
+          src="/images/pisicloud-logo.svg"
+          alt="PISICloud logo"
+          width="128"
+          height="26"
+          class="h-5 sm:h-6 md:h-6.5 w-auto"
+        />
       </div>
+
+      <!-- Center Badge -->
+      <div
+        class="inline-flex items-center justify-center px-2.5 py-0.5 sm:px-4 sm:py-1 rounded-full bg-[#0B4D46] text-white text-[10px] sm:text-[11px] font-medium tracking-wide shadow-2xs text-center"
+      >
+        Management Overview
+      </div>
+
+      <!-- Right Info Badge -->
+      <div
+        class="flex items-center justify-center w-5 h-5 sm:w-5.5 sm:h-5.5 rounded-full bg-[#0B4D46] text-white font-serif font-bold text-[10px] sm:text-[11px] shadow-2xs shrink-0"
+        aria-label="Info"
+      >
+        i
+      </div>
+    </header>
+
+    <!-- Mockup Body (Sidebar on desktop / Horizontal tabs on mobile + Content) -->
+    <div class="flex flex-col md:flex-row items-stretch bg-white">
+      <!-- Navigation: Horizontal Scroll on Mobile, Vertical Sidebar on md+ -->
+      <aside
+        class="w-full md:w-44 shrink-0 border-b md:border-b-0 md:border-r border-gray-100 py-2 md:py-3 px-2 md:px-3 flex flex-row md:flex-col overflow-x-auto md:overflow-x-visible gap-1.5 md:gap-0 md:space-y-1 bg-white [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
+        <div
+          *ngFor="let item of navItems"
+          class="flex items-center gap-1.5 sm:gap-2 md:gap-2.5 px-2.5 sm:px-3 py-1.5 rounded-md text-xs font-medium whitespace-nowrap transition-colors shrink-0"
+          [ngClass]="{
+            'bg-[#E3F5EE] text-[#0B4D46] font-semibold': item.active,
+            'text-gray-500 hover:text-gray-800 hover:bg-gray-50': !item.active
+          }"
+        >
+          <!-- Checkbox/square icon indicator -->
+          <span
+            *ngIf="!item.active"
+            class="w-3.5 h-3.5 rounded-[3px] border border-gray-300 inline-block shrink-0"
+            aria-hidden="true"
+          ></span>
+          <span
+            *ngIf="item.active"
+            class="w-3.5 h-3.5 rounded-[3px] border border-[#0B4D46] flex items-center justify-center shrink-0"
+            aria-hidden="true"
+          >
+            <span class="w-1.5 h-1.5 rounded-[1px] bg-[#0B4D46]"></span>
+          </span>
+          <span>{{ item.name }}</span>
+        </div>
+      </aside>
+
+      <!-- Main Dashboard Viewport -->
+      <main class="flex-1 p-2.5 sm:p-3.5 md:p-4 bg-[#FAFDFB]/60 space-y-2.5 sm:space-y-3 min-w-0">
+        <!-- Top Section: Stacked on mobile, 2 Columns on md+ -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 sm:gap-3 md:gap-3.5">
+          <!-- Left Column on md+ / First Block on mobile: 2 Rows of Metric Cards -->
+          <div class="flex flex-col space-y-2.5 sm:space-y-3">
+            <!-- Row 1: All Active Employee & New Hire -->
+            <div class="grid grid-cols-5 gap-2 sm:gap-2.5 md:gap-3">
+              <!-- All Active Employee (3 cols) -->
+              <div class="col-span-3 bg-white rounded-xl border border-gray-100/90 shadow-2xs flex flex-col overflow-hidden">
+                <div class="py-1.5 sm:py-2 text-center border-b border-gray-100/80">
+                  <h3 class="text-[11px] sm:text-xs font-semibold text-gray-800">All Active Employee</h3>
+                </div>
+                <div class="grid grid-cols-3 divide-x divide-gray-100/80 py-2 sm:py-2.5 text-center flex-1 items-center">
+                  <div class="px-1 sm:px-1.5">
+                    <div class="text-base sm:text-lg md:text-xl font-bold text-[#0B4D46]">
+                      {{ activeEmployeeStats.temporary }}
+                    </div>
+                    <div class="text-[9px] sm:text-[10px] text-gray-400 font-medium">Temporary</div>
+                  </div>
+                  <div class="px-1 sm:px-1.5">
+                    <div class="text-base sm:text-lg md:text-xl font-bold text-[#0B4D46]">
+                      {{ activeEmployeeStats.permanent }}
+                    </div>
+                    <div class="text-[9px] sm:text-[10px] text-gray-400 font-medium">Permanent</div>
+                  </div>
+                  <div class="px-1 sm:px-1.5">
+                    <div class="text-base sm:text-lg md:text-xl font-bold text-[#0B4D46]">
+                      {{ activeEmployeeStats.total }}
+                    </div>
+                    <div class="text-[9px] sm:text-[10px] text-gray-400 font-medium">Total</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- New Hire (2 cols) -->
+              <div class="col-span-2 bg-white rounded-xl border border-gray-100/90 shadow-2xs flex flex-col overflow-hidden">
+                <div class="py-1.5 sm:py-2 text-center border-b border-gray-100/80">
+                  <h3 class="text-[11px] sm:text-xs font-semibold text-gray-800">New Hire</h3>
+                </div>
+                <div class="flex-1 flex items-center justify-center py-2 sm:py-2.5">
+                  <div class="text-base sm:text-lg md:text-xl font-bold text-[#0B4D46]">
+                    {{ newHiresCount }}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2: Employees & Resign -->
+            <div class="grid grid-cols-5 gap-2 sm:gap-2.5 md:gap-3">
+              <!-- Employees (3 cols) -->
+              <div class="col-span-3 bg-white rounded-xl border border-gray-100/90 shadow-2xs flex flex-col overflow-hidden">
+                <div class="py-1.5 sm:py-2 text-center border-b border-gray-100/80">
+                  <h3 class="text-[11px] sm:text-xs font-semibold text-gray-800">Employees</h3>
+                </div>
+                <div class="grid grid-cols-2 divide-x divide-gray-100/80 py-2 sm:py-2.5 text-center flex-1 items-center">
+                  <div class="px-1.5 sm:px-2">
+                    <div class="text-base sm:text-lg md:text-xl font-bold text-[#0B4D46]">
+                      {{ genderStats.male }}
+                    </div>
+                    <div class="text-[9px] sm:text-[10px] text-gray-400 font-medium">Male</div>
+                  </div>
+                  <div class="px-1.5 sm:px-2">
+                    <div class="text-base sm:text-lg md:text-xl font-bold text-[#0B4D46]">
+                      {{ genderStats.female }}
+                    </div>
+                    <div class="text-[9px] sm:text-[10px] text-gray-400 font-medium">Female</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Resign (2 cols) -->
+              <div class="col-span-2 bg-white rounded-xl border border-gray-100/90 shadow-2xs flex flex-col overflow-hidden">
+                <div class="py-1.5 sm:py-2 text-center border-b border-gray-100/80">
+                  <h3 class="text-[11px] sm:text-xs font-semibold text-gray-800">Resign</h3>
+                </div>
+                <div class="flex-1 flex items-center justify-center py-2 sm:py-2.5">
+                  <div class="text-base sm:text-lg md:text-xl font-bold text-[#0B4D46]">
+                    {{ resignCount }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column on md+ / Next Card on mobile: Eoc (End Of Contract) Table -->
+          <div class="bg-white rounded-xl border border-gray-100/90 shadow-2xs p-2.5 sm:p-3 flex flex-col">
+            <h3 class="text-[11px] sm:text-xs font-semibold text-gray-800 mb-2 sm:mb-2.5">Eoc (End Of Contract)</h3>
+            <div class="rounded-lg overflow-x-auto border border-gray-100">
+              <table class="w-full text-left text-xs min-w-[260px]">
+                <thead class="bg-[#0B4D46] text-white text-[10px] sm:text-[11px] font-semibold">
+                  <tr>
+                    <th class="px-2.5 sm:px-3 py-1.5 font-semibold">ID</th>
+                    <th class="px-2.5 sm:px-3 py-1.5 font-semibold">Name</th>
+                    <th class="px-2.5 sm:px-3 py-1.5 font-semibold">Resign Date</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 text-gray-600 text-[10px] sm:text-[11px]">
+                  <tr *ngFor="let row of contractEndData" class="hover:bg-gray-50/50">
+                    <td class="px-2.5 sm:px-3 py-1.5 whitespace-nowrap">{{ row.id }}</td>
+                    <td class="px-2.5 sm:px-3 py-1.5 whitespace-nowrap">{{ row.name }}</td>
+                    <td class="px-2.5 sm:px-3 py-1.5 whitespace-nowrap">{{ row.resignDate }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section: Stacked on mobile, 2 Equal Columns on md+ -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 sm:gap-3 md:gap-3.5">
+          <!-- Document Expired -->
+          <div class="bg-white rounded-xl border border-gray-100/90 shadow-2xs p-2.5 sm:p-3 flex flex-col">
+            <h3 class="text-[11px] sm:text-xs font-semibold text-gray-800 mb-2 sm:mb-2.5">Document Expired</h3>
+            <div class="rounded-lg overflow-x-auto border border-gray-100">
+              <table class="w-full text-left text-xs min-w-[280px]">
+                <thead class="bg-[#0B4D46] text-white text-[10px] sm:text-[11px] font-semibold">
+                  <tr>
+                    <th class="px-2.5 sm:px-3 py-1.5 font-semibold">Employee ID</th>
+                    <th class="px-2.5 sm:px-3 py-1.5 font-semibold">Doc Type</th>
+                    <th class="px-2.5 sm:px-3 py-1.5 font-semibold">Expired Date</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 text-gray-600 text-[10px] sm:text-[11px]">
+                  <tr *ngFor="let row of documentExpiredData" class="hover:bg-gray-50/50">
+                    <td class="px-2.5 sm:px-3 py-1.5 whitespace-nowrap">{{ row.employeeId }}</td>
+                    <td class="px-2.5 sm:px-3 py-1.5 whitespace-nowrap">{{ row.docType }}</td>
+                    <td class="px-2.5 sm:px-3 py-1.5 whitespace-nowrap">{{ row.expiredDate }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Consecutive Absences with Notice (Days) -->
+          <div class="bg-white rounded-xl border border-gray-100/90 shadow-2xs p-2.5 sm:p-3 flex flex-col">
+            <h3 class="text-[11px] sm:text-xs font-semibold text-gray-800 mb-2 sm:mb-2.5">
+              Consecutive Absences with Notice (Days)
+            </h3>
+            <div class="rounded-lg overflow-x-auto border border-gray-100">
+              <table class="w-full text-left text-xs min-w-[260px]">
+                <thead class="bg-[#0B4D46] text-white text-[10px] sm:text-[11px] font-semibold">
+                  <tr>
+                    <th class="px-2.5 sm:px-3 py-1.5 font-semibold">ID</th>
+                    <th class="px-2.5 sm:px-3 py-1.5 font-semibold">Name</th>
+                    <th class="px-2.5 sm:px-3 py-1.5 font-semibold">Resign Date</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 text-gray-600 text-[10px] sm:text-[11px]">
+                  <tr *ngFor="let row of consecutiveAbsencesData" class="hover:bg-gray-50/50">
+                    <td class="px-2.5 sm:px-3 py-1.5 whitespace-nowrap">{{ row.id }}</td>
+                    <td class="px-2.5 sm:px-3 py-1.5 whitespace-nowrap">{{ row.name }}</td>
+                    <td class="px-2.5 sm:px-3 py-1.5 whitespace-nowrap">{{ row.resignDate }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   </div>
 </div>

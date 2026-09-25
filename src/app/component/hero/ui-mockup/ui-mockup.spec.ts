@@ -164,4 +164,17 @@ describe('UiMockupComponent', () => {
     expect(table?.textContent).toContain('Dzikri');
     expect(table?.textContent).toContain('Gery');
   });
+
+  it('applies responsive classes for mobile scrollable navigation and tables', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    const aside = compiled.querySelector('aside');
+    expect(aside?.classList.contains('overflow-x-auto')).toBe(true);
+    expect(aside?.classList.contains('md:flex-col')).toBe(true);
+
+    const tables = compiled.querySelectorAll('table');
+    tables.forEach((table) => {
+      const parent = table.parentElement;
+      expect(parent?.classList.contains('overflow-x-auto')).toBe(true);
+    });
+  });
 });
