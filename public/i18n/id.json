@@ -25,5 +25,13 @@
   },
   "COMMON": {
     "APP_NAME": "PISICloud"
+  },
+  "HERO": {
+    "TITLE_LINE1": "Manajemen SDM Efisien bersama",
+    "BRAND": "PISICloud",
+    "TITLE_LINE2_SUFFIX": "HRM",
+    "SUBTITLE": "Kelola seluruh proses pengelolaan karyawan dalam satu sistem yang terhubung, dari kehadiran hingga penggajian.",
+    "CTA_PRIMARY": "Kontak Kami",
+    "CTA_SECONDARY": "Lihat Video"
   }
 }

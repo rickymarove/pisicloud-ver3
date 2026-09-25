@@ -25,5 +25,13 @@
   },
   "COMMON": {
     "APP_NAME": "PISICloud"
+  },
+  "HERO": {
+    "TITLE_LINE1": "効率的な人事・労務管理を",
+    "BRAND": "PISICloud",
+    "TITLE_LINE2_SUFFIX": "HRM",
+    "SUBTITLE": "勤怠管理から給与計算まで、従業員管理の全プロセスを1つの統合システムで管理。",
+    "CTA_PRIMARY": "お問い合わせ",
+    "CTA_SECONDARY": "動画を見る"
   }
 }

@@ -8,6 +8,9 @@ import { LanguageOption, LanguageService } from '../../../core/services/language
   standalone: true,
   imports: [CommonModule, TranslatePipe],
   templateUrl: './header.html',
+  host: {
+    class: 'block relative z-30',
+  },
 })
 export class HeaderComponent {
   private readonly elementRef = inject(ElementRef);

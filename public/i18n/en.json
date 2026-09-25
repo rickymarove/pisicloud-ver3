@@ -25,5 +25,13 @@
   },
   "COMMON": {
     "APP_NAME": "PISICloud"
+  },
+  "HERO": {
+    "TITLE_LINE1": "Efficient HR Management with",
+    "BRAND": "PISICloud",
+    "TITLE_LINE2_SUFFIX": "HRM",
+    "SUBTITLE": "Manage the entire employee lifecycle in one connected system, from attendance to payroll.",
+    "CTA_PRIMARY": "Contact Us",
+    "CTA_SECONDARY": "Watch Video"
   }
 }

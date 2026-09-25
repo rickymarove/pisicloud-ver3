@@ -1,36 +1,36 @@
-<header class="w-full bg-white font-sans py-3.5 shadow-sm">
+<header class="w-full bg-white font-sans py-4 sm:py-4.5 rounded-b-4xl md:rounded-b-[15px] border-b border-x border-gray-200/70 shadow-[0_8px_24px_-4px_rgba(24,40,73,0.08),0_2px_8px_-2px_rgba(24,40,73,0.04)]">
   <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative flex items-center justify-between gap-4 md:gap-10">
     <a href="/" class="flex items-center shrink-0">
       <img
         src="/images/pisicloud-logo.svg"
         alt="PISICloud logo"
-        width="173"
-        height="35"
+        width="198"
+        height="40"
         fetchpriority="high"
-        class="h-8 w-auto"
+        class="h-8.5 sm:h-9 md:h-10 w-auto"
       />
     </a>
 
     <nav
-      class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8"
+      class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8 lg:gap-10"
       [attr.aria-label]="'HEADER.ARIA.MAIN_NAV' | translate"
     >
       <a
         *ngFor="let link of navLinks"
         [href]="link.href"
-        class="text-[15px] font-bold text-[#182849] transition-opacity hover:opacity-75"
+        class="text-[15.5px] lg:text-[16px] font-bold text-[#182849] tracking-[-0.01em] transition-all hover:text-[#6d4552] hover:opacity-85"
       >
         {{ link.key | translate }}
       </a>
     </nav>
 
-    <div class="hidden md:flex items-center gap-4 shrink-0">
+    <div class="hidden md:flex items-center gap-4.5 shrink-0">
       <ng-container *ngTemplateOutlet="headerActions"></ng-container>
     </div>
 
     <button
       type="button"
-      class="inline-flex h-11 w-11 md:hidden flex-col items-center justify-center gap-1.5 rounded-[10px] text-[#182849] transition-colors hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6d4552] motion-reduce:transition-none"
+      class="inline-flex h-11 w-11 md:hidden flex-col items-center justify-center gap-1.5 rounded-xl text-[#182849] transition-colors hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6d4552] motion-reduce:transition-none"
       (click)="toggleMobileMenu()"
       [attr.aria-expanded]="isMobileMenuOpen"
       aria-controls="mobile-menu"
@@ -62,17 +62,17 @@
         <a
           *ngFor="let link of navLinks"
           [href]="link.href"
-          class="py-3 text-[15px] font-bold text-[#182849] transition-opacity hover:opacity-75"
+          class="py-2.5 text-[15px] font-bold text-[#182849] transition-opacity hover:opacity-75"
           (click)="closeMobileMenu()"
         >
           {{ link.key | translate }}
         </a>
       </nav>
-      <div class="mt-3 flex flex-col items-stretch gap-3 border-t border-gray-100 pt-4">
+      <div class="mt-3.5 flex flex-col items-stretch gap-3 border-t border-gray-100 pt-4">
         <div class="flex items-center justify-start">
           <button
             type="button"
-            class="inline-flex h-9.5 items-center gap-2 rounded-full border border-gray-200/90 bg-gray-50/70 px-3 py-1.5 text-[13px] font-semibold tracking-wide text-[#182849] shadow-2xs transition-all duration-200 hover:border-gray-300 hover:bg-gray-100/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6d4552] motion-reduce:transition-none"
+            class="inline-flex h-10 items-center gap-2.5 rounded-full border border-gray-200/90 bg-gray-50/70 px-3.5 py-1.5 text-[13.5px] font-semibold tracking-wide text-[#182849] shadow-2xs transition-all duration-200 hover:border-gray-300 hover:bg-gray-100/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6d4552] motion-reduce:transition-none"
             (click)="openMobileLangSheet()"
             [attr.aria-expanded]="isMobileLangSheetOpen"
             aria-haspopup="dialog"
@@ -81,7 +81,7 @@
             <span class="text-base leading-none" aria-hidden="true">{{ selectedLang.flag }}</span>
             <span>{{ selectedLang.code }}</span>
             <svg
-              class="h-3 w-3 text-[#182849]/60 transition-transform duration-200 motion-reduce:transition-none"
+              class="h-3.5 w-3.5 text-[#182849]/60 transition-transform duration-200 motion-reduce:transition-none"
               [class.rotate-180]="isMobileLangSheetOpen"
               viewBox="0 0 12 12"
               fill="none"
@@ -94,7 +94,7 @@
 
         <button
           type="button"
-          class="w-full rounded-[10px] bg-linear-to-r from-[#6d4552] to-[#8e5e6e] px-5.5 py-2 text-[15px] font-semibold text-white shadow-xs transition-all duration-200 hover:from-[#5c3a45] hover:to-[#7b4f5d] hover:shadow-sm active:scale-[0.98]"
+          class="w-full rounded-xl bg-linear-to-r from-[#6d4552] to-[#8e5e6e] px-6 py-2.5 text-[15px] font-semibold text-white shadow-xs transition-all duration-200 hover:from-[#5c3a45] hover:to-[#7b4f5d] hover:shadow-sm active:scale-[0.98]"
           (click)="onScheduleDemo(); closeMobileMenu()"
         >
           {{ 'HEADER.ACTIONS.SCHEDULE_DEMO' | translate }}
@@ -103,7 +103,7 @@
     </div>
   </div>
 
-  <!-- Mobile Language Bottom Sheet (Mobile Viewports Only) -->
+  <!-- mobile language bottom sheet (mobile viewport only) -->
   <div
     *ngIf="isMobileLangSheetOpen"
     class="fixed inset-0 z-50 md:hidden"
@@ -111,23 +111,19 @@
     role="dialog"
     aria-modal="true"
   >
-    <!-- Backdrop Overlay -->
     <div
       class="fixed inset-0 bg-[#0f0f19]/40 backdrop-blur-[2px] animate-fade-in motion-reduce:animate-none"
       (click)="closeMobileLangSheet()"
       aria-hidden="true"
     ></div>
 
-    <!-- Bottom Sheet Container -->
     <div
       #mobileSheet
       class="fixed inset-x-0 bottom-0 z-50 flex flex-col rounded-t-3xl border-t border-gray-100 bg-white px-5 pt-3 pb-[max(1.5rem,env(safe-area-inset-bottom,1.5rem))] shadow-[0_-12px_36px_-6px_rgba(24,40,73,0.18)] animate-slide-up motion-reduce:animate-none"
       (keydown)="onSheetKeyDown($event)"
     >
-      <!-- Drag Handle Indicator -->
       <div class="mx-auto mb-3 h-1 w-10 shrink-0 rounded-full bg-gray-300" aria-hidden="true"></div>
 
-      <!-- Sheet Header -->
       <div class="mb-3 flex items-center justify-between">
         <h2 id="mobile-lang-title" class="text-base font-bold text-[#182849]">
           {{ 'HEADER.CHOOSE_LANGUAGE' | translate }}
@@ -144,7 +140,6 @@
         </button>
       </div>
 
-      <!-- Language Options List -->
       <div role="listbox" class="flex flex-col gap-1">
         <button
           *ngFor="let lang of languages"
@@ -181,7 +176,7 @@
     <div class="relative inline-block text-left">
       <button
         type="button"
-        class="inline-flex h-9.5 items-center gap-2 rounded-full border border-gray-200/90 bg-gray-50/70 px-3 py-1.5 text-[13px] font-semibold tracking-wide text-[#182849] shadow-2xs transition-all duration-200 hover:border-gray-300 hover:bg-gray-100/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6d4552] motion-reduce:transition-none"
+        class="inline-flex h-10 items-center gap-2.5 rounded-full border border-gray-200/90 bg-gray-50/70 px-3.5 py-1.5 text-[13.5px] font-semibold tracking-wide text-[#182849] shadow-2xs transition-all duration-200 hover:border-gray-300 hover:bg-gray-100/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6d4552] motion-reduce:transition-none"
         (click)="toggleLangMenu($event)"
         [attr.aria-expanded]="isLangMenuOpen"
         aria-haspopup="listbox"
@@ -190,7 +185,7 @@
         <span class="text-base leading-none" aria-hidden="true">{{ selectedLang.flag }}</span>
         <span>{{ selectedLang.code }}</span>
         <svg
-          class="h-3 w-3 text-[#182849]/60 transition-transform duration-200 motion-reduce:transition-none"
+          class="h-3.5 w-3.5 text-[#182849]/60 transition-transform duration-200 motion-reduce:transition-none"
           [class.rotate-180]="isLangMenuOpen"
           viewBox="0 0 12 12"
           fill="none"
@@ -203,14 +198,14 @@
       <ul
         *ngIf="isLangMenuOpen"
         role="listbox"
-        class="absolute left-1/2 -translate-x-1/2 top-[calc(100%+8px)] z-30 w-52 rounded-2xl border border-gray-100/90 bg-white/95 p-1.5 shadow-[0_12px_36px_-6px_rgba(24,40,73,0.12),0_4px_12px_-2px_rgba(24,40,73,0.06)] ring-1 ring-black/4 backdrop-blur-md origin-top animate-dropdown motion-reduce:animate-none"
+        class="absolute left-1/2 -translate-x-1/2 top-[calc(100%+8px)] z-30 w-56 rounded-2xl border border-gray-100/90 bg-white/95 p-1.5 shadow-[0_12px_36px_-6px_rgba(24,40,73,0.12),0_4px_12px_-2px_rgba(24,40,73,0.06)] ring-1 ring-black/4 backdrop-blur-md origin-top animate-dropdown motion-reduce:animate-none"
       >
         <li *ngFor="let lang of languages" role="none">
           <button
             type="button"
             role="option"
             [attr.aria-selected]="selectedLang.code === lang.code"
-            class="group flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-sm font-medium transition-all duration-150"
+            class="group flex w-full items-center justify-between rounded-xl px-3.5 py-2 text-left text-sm font-medium transition-all duration-150"
             [ngClass]="
               selectedLang.code === lang.code
                 ? 'bg-[#6d4552]/8 text-[#6d4552] font-semibold'
@@ -236,11 +231,11 @@
       </ul>
     </div>
 
-    <span class="hidden md:block h-6 w-px bg-gray-200" aria-hidden="true"></span>
+    <span class="hidden md:block h-7 w-px bg-gray-200/90" aria-hidden="true"></span>
 
     <button
       type="button"
-      class="w-full rounded-[10px] bg-linear-to-r from-[#6d4552] to-[#8e5e6e] px-5.5 py-2 text-[15px] font-semibold text-white shadow-xs transition-all duration-200 hover:from-[#5c3a45] hover:to-[#7b4f5d] hover:shadow-sm active:scale-[0.98] md:w-auto"
+      class="w-full rounded-xl bg-linear-to-r from-[#6d4552] to-[#8e5e6e] px-6 py-2.5 text-[15px] font-semibold text-white shadow-xs transition-all duration-200 hover:from-[#5c3a45] hover:to-[#7b4f5d] hover:shadow-sm active:scale-[0.98] md:w-auto"
       (click)="onScheduleDemo()"
     >
       {{ 'HEADER.ACTIONS.SCHEDULE_DEMO' | translate }}
