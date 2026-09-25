@@ -13,7 +13,8 @@
       "MOBILE_NAV": "移动端导航",
       "OPEN_MENU": "打开菜单",
       "CLOSE_MENU": "关闭菜单"
-    }
+    },
+    "CHOOSE_LANGUAGE": "选择语言"
   },
   "LANGUAGES": {
     "EN": "English",

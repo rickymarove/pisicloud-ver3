@@ -13,7 +13,8 @@
       "MOBILE_NAV": "모바일 내비게이션",
       "OPEN_MENU": "메뉴 열기",
       "CLOSE_MENU": "메뉴 닫기"
-    }
+    },
+    "CHOOSE_LANGUAGE": "언어 선택"
   },
   "LANGUAGES": {
     "EN": "English",
