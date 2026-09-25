@@ -13,7 +13,8 @@
       "MOBILE_NAV": "モバイルナビゲーション",
       "OPEN_MENU": "メニューを開く",
       "CLOSE_MENU": "メニューを閉じる"
-    }
+    },
+    "CHOOSE_LANGUAGE": "言語を選択"
   },
   "LANGUAGES": {
     "EN": "English",
