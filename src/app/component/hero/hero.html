@@ -1,10 +1,10 @@
 <section class="relative overflow-hidden bg-linear-to-b from-[#EBF7F4] via-[#F5FAF8]/80 to-white -mt-17 sm:-mt-18.5 md:-mt-19.5 pt-28 pb-8 sm:pt-34 md:pt-38 lg:pt-42">
   <div class="pointer-events-none absolute -top-28 left-1/2 -translate-x-1/2 h-96 w-190 max-w-full rounded-full bg-[#D4EFE9]/35 blur-3xl" aria-hidden="true"></div>
-  <div class="pointer-events-none absolute -top-20 -left-20 sm:-top-24 sm:-left-16 h-80 w-80 sm:h-110 sm:w-110 rounded-full bg-linear-to-br from-[#07B346]/60 via-[#E0F5F0]/40 to-transparent blur-3xl" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute -top-20 -left-20 sm:-top-24 sm:-left-16 h-80 w-80 sm:h-110 sm:w-110 rounded-full bg-linear-to-br from-[#085209]/60 via-[#E0F5F0]/40 to-transparent blur-3xl" aria-hidden="true"></div>
   <div class="pointer-events-none absolute -top-16 -right-16 sm:-top-20 sm:-right-20 h-72 w-72 sm:h-96 sm:w-96 rounded-full bg-linear-to-bl from-[#92E0B4]/60 via-[#E2F6F1]/40 to-transparent blur-3xl" aria-hidden="true"></div>
 
   <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h1 class="font-sans font-extrabold text-[#182849] text-3xl sm:text-4xl md:text-5xl lg:text-[54px] xl:text-[58px] tracking-tight leading-[1.15] sm:leading-[1.18]">
+    <h1 class="font-sans font-extrabold text-[#2A302E] text-4xl sm:text-5xl md:text-6xl lg:text-[64px] xl:text-[70px] tracking-tight leading-[1.12] sm:leading-[1.14]">
       <span class="block whitespace-normal sm:whitespace-nowrap">{{ 'HERO.TITLE_LINE1' | translate }}</span>
       <span class="block whitespace-nowrap mt-0.5 sm:mt-1">
         <span class="text-[#0E6C5E]">{{ 'HERO.BRAND' | translate }}</span> {{ 'HERO.TITLE_LINE2_SUFFIX' | translate }}
@@ -15,20 +15,22 @@
       {{ 'HERO.SUBTITLE' | translate }}
     </p>
 
-    <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4.5">
+    <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4">
       <a
         href="#contact"
         (click)="onContactUs()"
-        class="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 rounded-xl bg-[#0E6C5E] text-white text-[15px] sm:text-base font-semibold shadow-xs hover:bg-[#0b5449] hover:shadow-md active:scale-[0.98] transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0E6C5E]"
+        class="w-full sm:w-auto inline-flex items-center justify-center px-6.5 py-2.5 sm:px-7 sm:py-2.5 rounded-xl bg-linear-to-r from-[#0E6C5E] to-[#2DA995] text-white font-display text-[15px] sm:text-base font-semibold shadow-xs hover:from-[#0b5449] hover:to-[#248d7d] hover:shadow-md active:scale-[0.98] transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0E6C5E]"
       >
         {{ 'HERO.CTA_PRIMARY' | translate }}
       </a>
       <button
         type="button"
         (click)="onWatchVideo()"
-        class="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 rounded-xl border border-[#0E6C5E] bg-white text-[#0E6C5E] text-[15px] sm:text-base font-semibold shadow-2xs hover:bg-[#0E6C5E]/6 hover:shadow-xs active:scale-[0.98] transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0E6C5E]"
+        class="w-full sm:w-auto inline-flex items-center justify-center px-6.5 py-2.5 sm:px-7 sm:py-2.5 rounded-xl border border-transparent bg-origin-border [background-clip:padding-box,border-box] bg-[linear-gradient(white,white),linear-gradient(to_right,#0E6C5E,#209B86)] font-display text-[15px] sm:text-base font-semibold shadow-2xs hover:bg-[#0E6C5E]/5 hover:shadow-xs active:scale-[0.98] transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0E6C5E]"
       >
-        {{ 'HERO.CTA_SECONDARY' | translate }}
+        <span class="bg-linear-to-r from-[#0E6C5E] to-[#209B86] bg-clip-text text-transparent">
+          {{ 'HERO.CTA_SECONDARY' | translate }}
+        </span>
       </button>
     </div>
 

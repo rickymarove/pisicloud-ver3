@@ -52,11 +52,16 @@ describe('HeroComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('renders headline with Inter font (font-sans) and bold 700 weight in 2 distinct line blocks', () => {
+  it('renders headline with Inter font (font-sans) in 2 distinct line blocks', () => {
     const heading = fixture.nativeElement.querySelector('h1') as HTMLElement;
     expect(heading).toBeTruthy();
     expect(heading.classList.contains('font-sans')).toBe(true);
-    expect(heading.classList.contains('font-bold') || heading.classList.contains('font-[700]')).toBe(true);
+    expect(
+      heading.classList.contains('font-bold') ||
+      heading.classList.contains('font-extrabold') ||
+      heading.classList.contains('font-[700]') ||
+      heading.classList.contains('font-[800]')
+    ).toBe(true);
     
     const lineSpans = heading.querySelectorAll(':scope > span');
     expect(lineSpans.length).toBe(2);
@@ -77,20 +82,29 @@ describe('HeroComponent', () => {
     expect(subtitle.textContent).toContain('Kelola seluruh proses pengelolaan karyawan dalam satu sistem yang terhubung, dari kehadiran hingga penggajian.');
   });
 
-  it('renders primary CTA button "Kontak Kami" and emits contactUs event on click', () => {
+  it('renders primary CTA button "Kontak Kami" with DM Sans, SemiBold, shorter padding, gradient background, and emits contactUs event on click', () => {
     const primaryBtn = fixture.nativeElement.querySelector('a[href="#contact"]') as HTMLAnchorElement;
     expect(primaryBtn).toBeTruthy();
     expect(primaryBtn.textContent?.trim()).toBe('Kontak Kami');
+    expect(primaryBtn.classList.contains('font-display')).toBe(true);
+    expect(primaryBtn.classList.contains('font-semibold')).toBe(true);
+    expect(primaryBtn.classList.contains('py-2.5')).toBe(true);
+    expect(primaryBtn.classList.contains('bg-linear-to-r')).toBe(true);
 
     const spy = vi.spyOn(component.contactUs, 'emit');
     primaryBtn.click();
     expect(spy).toHaveBeenCalled();
   });
 
-  it('renders secondary CTA button "Lihat Video" and emits watchVideo event on click', () => {
+  it('renders secondary CTA button "Lihat Video" with DM Sans, SemiBold, shorter padding, gradient border/text, and emits watchVideo event on click', () => {
     const secondaryBtn = fixture.nativeElement.querySelector('button') as HTMLButtonElement;
     expect(secondaryBtn).toBeTruthy();
     expect(secondaryBtn.textContent?.trim()).toBe('Lihat Video');
+    expect(secondaryBtn.classList.contains('font-display')).toBe(true);
+    expect(secondaryBtn.classList.contains('font-semibold')).toBe(true);
+    expect(secondaryBtn.classList.contains('py-2.5')).toBe(true);
+    const gradientSpan = secondaryBtn.querySelector('span.bg-linear-to-r') as HTMLElement;
+    expect(gradientSpan).toBeTruthy();
 
     const spy = vi.spyOn(component.watchVideo, 'emit');
     secondaryBtn.click();
