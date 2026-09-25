@@ -25,5 +25,13 @@
   },
   "COMMON": {
     "APP_NAME": "PISICloud"
+  },
+  "HERO": {
+    "TITLE_LINE1": "효율적인 HR 관리를",
+    "BRAND": "PISICloud",
+    "TITLE_LINE2_SUFFIX": "HRM과 함께",
+    "SUBTITLE": "근태 관리부터 급여 정산까지, 모든 직원 관리 프로세스를 하나의 연결된 시스템에서 관리하세요.",
+    "CTA_PRIMARY": "문의하기",
+    "CTA_SECONDARY": "비디오 보기"
   }
 }

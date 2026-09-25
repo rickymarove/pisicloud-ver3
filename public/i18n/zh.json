@@ -25,5 +25,13 @@
   },
   "COMMON": {
     "APP_NAME": "PISICloud"
+  },
+  "HERO": {
+    "TITLE_LINE1": "高效的人力资源管理，携手",
+    "BRAND": "PISICloud",
+    "TITLE_LINE2_SUFFIX": "HRM",
+    "SUBTITLE": "从考勤到薪酬计算，在一个互联系统中管理完整的员工生命周期。",
+    "CTA_PRIMARY": "联系我们",
+    "CTA_SECONDARY": "观看视频"
   }
 }

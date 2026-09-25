@@ -30,4 +30,11 @@ describe('App', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('universal-header')).toBeTruthy();
   });
+
+  it('should render app-hero inside main', async () => {
+    const fixture = TestBed.createComponent(App);
+    await fixture.whenStable();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('main app-hero')).toBeTruthy();
+  });
 });
