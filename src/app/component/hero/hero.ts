@@ -7,6 +7,9 @@ import { TranslatePipe } from '@ngx-translate/core';
   standalone: true,
   imports: [CommonModule, TranslatePipe],
   templateUrl: './hero.html',
+  host: {
+    class: 'block relative z-10',
+  },
 })
 export class HeroComponent {
   @Output() contactUs = new EventEmitter<void>();
