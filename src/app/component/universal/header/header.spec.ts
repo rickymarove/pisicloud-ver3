@@ -215,4 +215,23 @@ describe('HeaderComponent', () => {
     component.onSheetKeyDown(shiftTabEvent);
     expect(shiftTabEvent.defaultPrevented).toBe(true);
   });
+
+  it('applies smooth rounded corners to the bottom while keeping top corners untouched', () => {
+    const header = fixture.nativeElement.querySelector('header') as HTMLElement;
+    expect(header).toBeTruthy();
+    expect(
+      header.classList.contains('rounded-b-[32px]') ||
+        header.classList.contains('md:rounded-b-[40px]') ||
+        header.className.includes('rounded-b-')
+    ).toBe(true);
+    expect(
+      header.classList.contains('rounded-t-2xl') ||
+        header.classList.contains('rounded-t-3xl') ||
+        header.classList.contains('rounded-full') ||
+        header.classList.contains('rounded-2xl') ||
+        header.classList.contains('rounded-3xl') ||
+        header.className.includes('rounded-t-')
+    ).toBe(false);
+  });
 });
+
