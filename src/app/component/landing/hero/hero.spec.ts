@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { inject, provideAppInitializer } from '@angular/core';
 import { provideTranslateService, TranslateService } from '@ngx-translate/core';
 import { HeroComponent } from './hero';
-import { LanguageService } from '../../core/services/language.service';
+import { LanguageService } from '../../../core/services/language.service';
 
 describe('HeroComponent', () => {
   let component: HeroComponent;
@@ -125,5 +125,10 @@ describe('HeroComponent', () => {
     expect(subtitle.textContent).toContain('Manage the entire employee lifecycle');
     expect(primaryBtn.textContent?.trim()).toBe('Contact Us');
     expect(secondaryBtn.textContent?.trim()).toBe('Watch Video');
+  });
+
+  it('renders the UI mockup component within the hero section', () => {
+    const mockup = fixture.nativeElement.querySelector('app-ui-mockup');
+    expect(mockup).toBeTruthy();
   });
 });
