@@ -33,5 +33,54 @@
     "SUBTITLE": "勤怠管理から給与計算まで、従業員管理の全プロセスを1つの統合システムで管理。",
     "CTA_PRIMARY": "お問い合わせ",
     "CTA_SECONDARY": "動画を見る"
+  },
+  "UI_INTEGRATED": {
+    "SECTION_TITLE": "ビジネスを一箇所から管理",
+    "SECTION_SUBTITLE": "確認したい領域を選択。すべてのプロセスが同じデータに連携し、常に追跡可能です。",
+    "CARD_SYSTEM_TITLE": "Integrated HR System",
+    "FLOATING_BADGE": {
+      "TITLE": "Employee Data",
+      "SUBTITLE": "一元化された従業員データ管理"
+    },
+    "PROFILE": {
+      "NAME": "Ricky Kopken",
+      "ROLE": "Barista",
+      "NIK_LABEL": "NIK",
+      "EMPLOYEE_TYPE_LABEL": "Employee Type",
+      "EMPLOYEE_TYPE_VALUE": "Intern",
+      "STATUS_LABEL": "Status",
+      "STATUS_VALUE": "Active"
+    },
+    "SUB_CARDS": {
+      "ATTENDANCE": {
+        "TITLE": "Attendance",
+        "BULLET_1": "出退勤管理",
+        "BULLET_2": "残業申請",
+        "BULLET_3": "休暇・各種申請",
+        "ACTION": "詳細を見る"
+      },
+      "PAYROLL": {
+        "TITLE": "Payroll",
+        "BULLET_1": "基本給",
+        "BULLET_2": "諸手当",
+        "BULLET_3": "各種控除",
+        "ACTION": "詳細を見る"
+      },
+      "HR": {
+        "TITLE": "HR",
+        "BULLET_1": "従業員プロフィール",
+        "BULLET_2": "パフォーマンス評価",
+        "BULLET_3": "書類管理",
+        "ACTION": "詳細を見る"
+      }
+    },
+    "HERO_COPY": {
+      "TITLE_LINE1": "人事・労務の全ニーズを、",
+      "TITLE_LINE2_PREFIX": "",
+      "TITLE_LINE2_HIGHLIGHT": "より簡単に",
+      "TITLE_LINE3_HIGHLIGHT": "スマート管理",
+      "DESCRIPTION": "勤怠管理から給与計算、従業員管理まで、PISICloudは統合システムを通じて管理プロセスをシンプルにします",
+      "CTA_BUTTON": "詳細を見る"
+    }
   }
 }

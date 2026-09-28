@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { provideTranslateService } from '@ngx-translate/core';
 import { Landing } from './landing';
 
 describe('Landing', () => {
@@ -9,6 +10,9 @@ describe('Landing', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [Landing],
+      providers: [
+        provideTranslateService({ fallbackLang: 'id', lang: 'id' }),
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(Landing);
@@ -18,5 +22,12 @@ describe('Landing', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should render app-hero, app-ui-integrated, and app-feature components', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('app-hero')).toBeTruthy();
+    expect(compiled.querySelector('app-ui-integrated')).toBeTruthy();
+    expect(compiled.querySelector('app-feature')).toBeTruthy();
   });
 });
