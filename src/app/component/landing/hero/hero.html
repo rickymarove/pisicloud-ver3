@@ -1,4 +1,4 @@
-<section class="relative overflow-hidden bg-linear-to-b from-[#EBF7F4] via-[#F5FAF8]/80 to-white -mt-17 sm:-mt-18.5 md:-mt-19.5 pt-28 pb-8 sm:pt-34 md:pt-38 lg:pt-42">
+<section class="relative overflow-hidden bg-linear-to-b from-[#EBF7F4] via-[#F5FAF8]/80 to-white -mt-17 sm:-mt-18.5 md:-mt-19.5 pt-28 pb-16 sm:pt-34 sm:pb-20 md:pt-38 md:pb-24 lg:pt-42">
   <div class="pointer-events-none absolute -top-28 left-1/2 -translate-x-1/2 h-96 w-190 max-w-full rounded-full bg-[#D4EFE9]/35 blur-3xl" aria-hidden="true"></div>
   <div class="pointer-events-none absolute -top-20 -left-20 sm:-top-24 sm:-left-16 h-80 w-80 sm:h-110 sm:w-110 rounded-full bg-linear-to-br from-[#085209]/60 via-[#E0F5F0]/40 to-transparent blur-3xl" aria-hidden="true"></div>
   <div class="pointer-events-none absolute -top-16 -right-16 sm:-top-20 sm:-right-20 h-72 w-72 sm:h-96 sm:w-96 rounded-full bg-linear-to-bl from-[#92E0B4]/60 via-[#E2F6F1]/40 to-transparent blur-3xl" aria-hidden="true"></div>
@@ -19,19 +19,24 @@
       <a
         href="#contact"
         (click)="onContactUs()"
-        class="w-full sm:w-auto inline-flex items-center justify-center px-6.5 py-2.5 sm:px-7 sm:py-2.5 rounded-xl bg-linear-to-r from-[#0E6C5E] to-[#2DA995] text-white font-display text-[15px] sm:text-base font-semibold shadow-xs hover:from-[#0b5449] hover:to-[#248d7d] hover:shadow-md active:scale-[0.98] transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0E6C5E]"
+        class="w-full sm:w-auto inline-flex items-center justify-center px-6.5 py-2.5 sm:px-7 sm:py-2.5 rounded-xl bg-linear-to-r from-[#0E6C5E] to-[#2DA995] text-white font-display text-[15px] sm:text-xl font-semibold shadow-xs hover:from-[#0b5449] hover:to-[#248d7d] hover:shadow-md active:scale-[0.98] transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0E6C5E]"
       >
         {{ 'HERO.CTA_PRIMARY' | translate }}
       </a>
       <button
         type="button"
         (click)="onWatchVideo()"
-        class="w-full sm:w-auto inline-flex items-center justify-center px-6.5 py-2.5 sm:px-7 sm:py-2.5 rounded-xl border border-transparent bg-origin-border [background-clip:padding-box,border-box] bg-[linear-gradient(white,white),linear-gradient(to_right,#0E6C5E,#209B86)] font-display text-[15px] sm:text-base font-semibold shadow-2xs hover:bg-[#0E6C5E]/5 hover:shadow-xs active:scale-[0.98] transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0E6C5E]"
+        class="w-full sm:w-auto inline-flex items-center justify-center px-6.5 py-2.5 sm:px-7 sm:py-2.5 rounded-xl border border-transparent bg-origin-border [background-clip:padding-box,border-box] bg-[linear-gradient(white,white),linear-gradient(to_right,#0E6C5E,#209B86)] font-display text-[15px] sm:text-xl font-semibold shadow-2xs hover:bg-[#0E6C5E]/5 hover:shadow-xs active:scale-[0.98] transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0E6C5E]"
       >
         <span class="bg-linear-to-r from-[#0E6C5E] to-[#209B86] bg-clip-text text-transparent">
           {{ 'HERO.CTA_SECONDARY' | translate }}
         </span>
       </button>
+    </div>
+
+    <!-- UI Mockup preview below the main hero -->
+    <div class="mt-8 sm:mt-12 md:mt-16 lg:mt-20">
+      <app-ui-mockup class="block text-left"></app-ui-mockup>
     </div>
 
   </div>
