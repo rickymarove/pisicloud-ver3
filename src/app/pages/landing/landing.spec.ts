@@ -25,9 +25,10 @@ describe('Landing', () => {
     expect(component).toBeTruthy();
   });
 
-  it('renders hero and feature sections', () => {
+  it('renders hero, ui-integrated, and feature sections', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('app-hero')).toBeTruthy();
+    expect(compiled.querySelector('app-ui-integrated')).toBeTruthy();
     expect(compiled.querySelector('app-feature')).toBeTruthy();
   });
 });

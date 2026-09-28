@@ -34,6 +34,41 @@
     "CTA_PRIMARY": "お問い合わせ",
     "CTA_SECONDARY": "動画を見る"
   },
+  "UI_INTEGRATED": {
+    "SECTION_TITLE": "ビジネスを一箇所から管理",
+    "SECTION_SUBTITLE": "確認したい領域を選択。すべてのプロセスが同じデータに連携し、常に追跡可能です。",
+    "FLOATING_BADGE": {
+      "SUBTITLE": "一元化された従業員データ管理"
+    },
+    "SUB_CARDS": {
+      "ATTENDANCE": {
+        "BULLET_1": "出退勤管理",
+        "BULLET_2": "残業申請",
+        "BULLET_3": "休暇・各種申請",
+        "ACTION": "詳細を見る"
+      },
+      "PAYROLL": {
+        "BULLET_1": "基本給",
+        "BULLET_2": "諸手当",
+        "BULLET_3": "各種控除",
+        "ACTION": "詳細を見る"
+      },
+      "HR": {
+        "BULLET_1": "従業員プロフィール",
+        "BULLET_2": "パフォーマンス評価",
+        "BULLET_3": "書類管理",
+        "ACTION": "詳細を見る"
+      }
+    },
+    "HERO_COPY": {
+      "TITLE_LINE1": "人事・労務の全ニーズを、",
+      "TITLE_LINE2_PREFIX": "",
+      "TITLE_LINE2_HIGHLIGHT": "より簡単に",
+      "TITLE_LINE3_HIGHLIGHT": "スマート管理",
+      "DESCRIPTION": "勤怠管理から給与計算、従業員管理まで、PISICloudは統合システムを通じて管理プロセスをシンプルにします",
+      "CTA_BUTTON": "詳細を見る"
+    }
+  },
   "FEATURE": {
     "TITLE_PREFIX": "の主要12機能",
     "TITLE_BRAND": "PISICloud",
@@ -78,7 +113,7 @@
       },
       "PAYROLL": {
         "TITLE": "給与計算・明細自動発行",
-        "DESC": "基本給、各種手当、社会保険料、残業手当、インセンティブの自動計算と暗号化Web給与明細の発行。"
+        "DESC": "基本給、各種手当、社会保険料、残業手当、インセンティブの自動計算と暗号化Web給与明细の発行。"
       },
       "PERSONAL_OVERTIME": {
         "TITLE": "個別残業申請・承認",

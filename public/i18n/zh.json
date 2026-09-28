@@ -34,6 +34,41 @@
     "CTA_PRIMARY": "联系我们",
     "CTA_SECONDARY": "观看视频"
   },
+  "UI_INTEGRATED": {
+    "SECTION_TITLE": "一站式掌控业务全局",
+    "SECTION_SUBTITLE": "选择您想要查看的业务领域。每个流程都连接到同一数据源，随时可追溯。",
+    "FLOATING_BADGE": {
+      "SUBTITLE": "单一系统中的集中化员工数据"
+    },
+    "SUB_CARDS": {
+      "ATTENDANCE": {
+        "BULLET_1": "打卡签到 / 签退",
+        "BULLET_2": "加班管理",
+        "BULLET_3": "休假与审批",
+        "ACTION": "查看详情"
+      },
+      "PAYROLL": {
+        "BULLET_1": "基本工资",
+        "BULLET_2": "津贴补贴",
+        "BULLET_3": "代扣代缴",
+        "ACTION": "查看详情"
+      },
+      "HR": {
+        "BULLET_1": "员工档案",
+        "BULLET_2": "绩效评估",
+        "BULLET_3": "合同与文档",
+        "ACTION": "查看详情"
+      }
+    },
+    "HERO_COPY": {
+      "TITLE_LINE1": "所有人力资源需求，",
+      "TITLE_LINE2_PREFIX": "",
+      "TITLE_LINE2_HIGHLIGHT": "更轻松",
+      "TITLE_LINE3_HIGHLIGHT": "高效管理",
+      "DESCRIPTION": "从考勤到薪资发放与员工管理，PISICloud通过一体化集成系统简化行政审批流程",
+      "CTA_BUTTON": "查看详情"
+    }
+  },
   "FEATURE": {
     "TITLE_PREFIX": "的 12 项核心功能",
     "TITLE_BRAND": "PISICloud",

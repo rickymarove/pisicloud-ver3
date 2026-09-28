@@ -34,6 +34,41 @@
     "CTA_PRIMARY": "Contact Us",
     "CTA_SECONDARY": "Watch Video"
   },
+  "UI_INTEGRATED": {
+    "SECTION_TITLE": "Control business from one place",
+    "SECTION_SUBTITLE": "Select the area you want to view. Every process connects to the same data and is always traceable.",
+    "FLOATING_BADGE": {
+      "SUBTITLE": "Centralized employee data in one system"
+    },
+    "SUB_CARDS": {
+      "ATTENDANCE": {
+        "BULLET_1": "Check-in / Check-out",
+        "BULLET_2": "Overtime",
+        "BULLET_3": "Leave & Permission",
+        "ACTION": "View Details"
+      },
+      "PAYROLL": {
+        "BULLET_1": "Basic Salary",
+        "BULLET_2": "Allowances",
+        "BULLET_3": "Deductions",
+        "ACTION": "View Details"
+      },
+      "HR": {
+        "BULLET_1": "Employee Profile",
+        "BULLET_2": "Performance",
+        "BULLET_3": "Documents",
+        "ACTION": "View Details"
+      }
+    },
+    "HERO_COPY": {
+      "TITLE_LINE1": "All HR Needs,",
+      "TITLE_LINE2_PREFIX": "",
+      "TITLE_LINE2_HIGHLIGHT": "Easier to",
+      "TITLE_LINE3_HIGHLIGHT": "Manage",
+      "DESCRIPTION": "From attendance to payroll and employee management, PISICloud helps simplify administrative processes through an integrated system",
+      "CTA_BUTTON": "View Details"
+    }
+  },
   "FEATURE": {
     "TITLE_PREFIX": "12 Key Features of",
     "TITLE_BRAND": "PISICloud",

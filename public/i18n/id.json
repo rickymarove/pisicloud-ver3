@@ -34,6 +34,41 @@
     "CTA_PRIMARY": "Kontak Kami",
     "CTA_SECONDARY": "Lihat Video"
   },
+  "UI_INTEGRATED": {
+    "SECTION_TITLE": "Kendalikan bisnis dari satu tempat",
+    "SECTION_SUBTITLE": "Pilih area yang ingin dilihat. Setiap proses terhubung ke data yang sama dan selalu dapat ditelusuri.",
+    "FLOATING_BADGE": {
+      "SUBTITLE": "Data karyawan terpusat dalam satu sistem"
+    },
+    "SUB_CARDS": {
+      "ATTENDANCE": {
+        "BULLET_1": "Check-in / Check-out",
+        "BULLET_2": "Lembur",
+        "BULLET_3": "Cuti & Izin",
+        "ACTION": "Lihat Detail"
+      },
+      "PAYROLL": {
+        "BULLET_1": "Gaji Pokok",
+        "BULLET_2": "Tunjangan",
+        "BULLET_3": "Potongan",
+        "ACTION": "Lihat Detail"
+      },
+      "HR": {
+        "BULLET_1": "Profil Karyawan",
+        "BULLET_2": "Performance",
+        "BULLET_3": "Dokumen",
+        "ACTION": "Lihat Detail"
+      }
+    },
+    "HERO_COPY": {
+      "TITLE_LINE1": "Semua Kebutuhan",
+      "TITLE_LINE2_PREFIX": "SDM, ",
+      "TITLE_LINE2_HIGHLIGHT": "Lebih Mudah",
+      "TITLE_LINE3_HIGHLIGHT": "Dikelola",
+      "DESCRIPTION": "Dari kehadiran hingga penggajian dan pengelola karyawan, PISICloud membantu menyederhanakan proses administrasi melalui sistem yang terintergrasi",
+      "CTA_BUTTON": "Lihat Detail"
+    }
+  },
   "FEATURE": {
     "TITLE_PREFIX": "12 Fitur Utama",
     "TITLE_BRAND": "PISICloud",
