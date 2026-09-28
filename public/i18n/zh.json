@@ -62,10 +62,8 @@
     },
     "HERO_COPY": {
       "TITLE_LINE1": "所有人力资源需求，",
-      "TITLE_LINE2_PREFIX": "",
-      "TITLE_LINE2_HIGHLIGHT": "更轻松",
-      "TITLE_LINE3_HIGHLIGHT": "高效管理",
-      "DESCRIPTION": "从考勤到薪资发放与员工管理，PISICloud通过一体化集成系统简化行政审批流程",
+      "TITLE_HIGHLIGHT": "更轻松高效管理",
+      "DESCRIPTION": "从考勤排班到薪资计算与员工管理，PISICloud一体化系统助您轻松简化日常人事流程。",
       "CTA_BUTTON": "查看详情"
     }
   },

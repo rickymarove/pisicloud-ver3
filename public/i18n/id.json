@@ -61,11 +61,9 @@
       }
     },
     "HERO_COPY": {
-      "TITLE_LINE1": "Semua Kebutuhan",
-      "TITLE_LINE2_PREFIX": "SDM, ",
-      "TITLE_LINE2_HIGHLIGHT": "Lebih Mudah",
-      "TITLE_LINE3_HIGHLIGHT": "Dikelola",
-      "DESCRIPTION": "Dari kehadiran hingga penggajian dan pengelola karyawan, PISICloud membantu menyederhanakan proses administrasi melalui sistem yang terintergrasi",
+      "TITLE_LINE1": "Semua Kebutuhan SDM,",
+      "TITLE_HIGHLIGHT": "Lebih Mudah Dikelola",
+      "DESCRIPTION": "Dari kehadiran hingga penggajian dan manajemen karyawan, PISICloud menyederhanakan proses administrasi dalam satu sistem terintegrasi.",
       "CTA_BUTTON": "Lihat Detail"
     }
   },

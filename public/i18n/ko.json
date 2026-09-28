@@ -62,10 +62,8 @@
     },
     "HERO_COPY": {
       "TITLE_LINE1": "모든 인사 관리 요구사항을,",
-      "TITLE_LINE2_PREFIX": "",
-      "TITLE_LINE2_HIGHLIGHT": "더 쉽게",
-      "TITLE_LINE3_HIGHLIGHT": "관리하세요",
-      "DESCRIPTION": "근태 관리부터 급여 정산 및 직원 관리까지, PISICloud는 통합 시스템을 통해 행정 프로세스를 간소화합니다",
+      "TITLE_HIGHLIGHT": "더 쉽게 관리하세요",
+      "DESCRIPTION": "근태 관리부터 급여 정산 및 직원 관리까지, PISICloud 통합 시스템으로 복잡한 행정 업무를 간소화합니다.",
       "CTA_BUTTON": "자세히 보기"
     }
   },
