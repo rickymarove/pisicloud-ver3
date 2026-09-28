@@ -44,11 +44,9 @@ describe('UiIntegratedComponent', () => {
           },
         },
         HERO_COPY: {
-          TITLE_LINE1: 'Semua Kebutuhan',
-          TITLE_LINE2_PREFIX: 'SDM, ',
-          TITLE_LINE2_HIGHLIGHT: 'Lebih Mudah',
-          TITLE_LINE3_HIGHLIGHT: 'Dikelola',
-          DESCRIPTION: 'Dari kehadiran hingga penggajian dan pengelola karyawan, PISICloud membantu menyederhanakan proses administrasi melalui sistem yang terintergrasi',
+          TITLE_LINE1: 'Semua Kebutuhan SDM,',
+          TITLE_HIGHLIGHT: 'Lebih Mudah Dikelola',
+          DESCRIPTION: 'Dari kehadiran hingga penggajian dan manajemen karyawan, PISICloud menyederhanakan proses administrasi dalam satu sistem terintegrasi.',
           CTA_BUTTON: 'Lihat Detail',
         },
       },
@@ -163,9 +161,8 @@ describe('UiIntegratedComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const heroTitle = compiled.querySelectorAll('h3')[1];
     expect(heroTitle).toBeTruthy();
-    expect(heroTitle.textContent).toContain('Semua Kebutuhan');
-    expect(heroTitle.textContent).toContain('SDM, Lebih Mudah');
-    expect(heroTitle.textContent).toContain('Dikelola');
+    expect(heroTitle.textContent).toContain('Semua Kebutuhan SDM,');
+    expect(heroTitle.textContent).toContain('Lebih Mudah Dikelola');
 
     const ctaButton = compiled.querySelector('button.bg-linear-to-r') as HTMLButtonElement;
     expect(ctaButton).toBeTruthy();

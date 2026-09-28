@@ -62,10 +62,8 @@
     },
     "HERO_COPY": {
       "TITLE_LINE1": "人事・労務の全ニーズを、",
-      "TITLE_LINE2_PREFIX": "",
-      "TITLE_LINE2_HIGHLIGHT": "より簡単に",
-      "TITLE_LINE3_HIGHLIGHT": "スマート管理",
-      "DESCRIPTION": "勤怠管理から給与計算、従業員管理まで、PISICloudは統合システムを通じて管理プロセスをシンプルにします",
+      "TITLE_HIGHLIGHT": "よりスマートに管理",
+      "DESCRIPTION": "勤怠管理から給与計算、従業員管理まで、PISICloudが一体型システムで人事労務プロセスをシンプルにします。",
       "CTA_BUTTON": "詳細を見る"
     }
   },

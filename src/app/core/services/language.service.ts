@@ -1,7 +1,8 @@
 import { inject, Injectable, PLATFORM_ID, signal } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
-import { firstValueFrom } from 'rxjs';
+
+import { APP_TRANSLATIONS } from '../i18n/translations';
 
 export interface LanguageOption {
   code: string;
@@ -34,9 +35,13 @@ export class LanguageService {
   constructor() {
     this.translate.addLangs(this.languages.map((l) => l.langKey));
     this.translate.setFallbackLang(DEFAULT_LANGUAGE.langKey);
+
+    for (const [langKey, translation] of Object.entries(APP_TRANSLATIONS)) {
+      this.translate.setTranslation(langKey, translation, true);
+    }
   }
 
-  async init(): Promise<void> {
+  init(): void {
     let initialLangKey = DEFAULT_LANGUAGE.langKey;
     const savedLang = this.getStoredLang();
     if (savedLang && this.languages.some((l) => l.langKey === savedLang)) {
@@ -45,12 +50,7 @@ export class LanguageService {
 
     const target = this.findLanguageOption(initialLangKey);
     this.currentLanguage.set(target);
-
-    try {
-      await firstValueFrom(this.translate.use(target.langKey));
-    } catch (error) {
-      console.error(`Failed to load translations for ${target.langKey}:`, error);
-    }
+    this.translate.use(target.langKey);
   }
 
   setLanguage(lang: LanguageOption | string): void {
