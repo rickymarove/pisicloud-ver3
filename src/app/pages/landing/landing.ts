@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HeroComponent } from '../../component/landing/hero/hero';
-import { Feature } from '../../component/feature/feature';
+import { Feature } from '../../component/landing/feature/feature';
 
 @Component({
   selector: 'app-landing',

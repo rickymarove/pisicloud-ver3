@@ -20,6 +20,7 @@ describe('HeaderComponent', () => {
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
+    component.selectLang(component.languages[0]);
     fixture.detectChanges();
     await fixture.whenStable();
   });

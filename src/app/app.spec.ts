@@ -2,6 +2,7 @@ import { inject, provideAppInitializer } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { provideHttpClient } from '@angular/common/http';
 import { provideTranslateService } from '@ngx-translate/core';
+import { provideRouter } from '@angular/router';
 import { App } from './app';
 import { LanguageService } from './core/services/language.service';
 
@@ -12,6 +13,7 @@ describe('App', () => {
       providers: [
         provideHttpClient(),
         provideTranslateService({ fallbackLang: 'en', lang: 'en' }),
+        provideRouter([]),
         LanguageService,
         provideAppInitializer(() => inject(LanguageService).init()),
       ],
@@ -31,10 +33,10 @@ describe('App', () => {
     expect(compiled.querySelector('universal-header')).toBeTruthy();
   });
 
-  it('should render app-hero inside main', async () => {
+  it('should render router-outlet inside main', async () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('main app-hero')).toBeTruthy();
+    expect(compiled.querySelector('main router-outlet')).toBeTruthy();
   });
 });
