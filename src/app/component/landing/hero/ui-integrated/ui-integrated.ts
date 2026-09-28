@@ -1,6 +1,13 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
+import {
+  LucideUser,
+  LucideUsers,
+  LucideCalendar,
+  LucideWallet,
+  LucideArrowRight,
+} from '@lucide/angular';
 
 export interface MiniNavItem {
   name: string;
@@ -18,7 +25,15 @@ export interface SubCardItem {
 @Component({
   selector: 'app-ui-integrated',
   standalone: true,
-  imports: [CommonModule, TranslatePipe],
+  imports: [
+    CommonModule,
+    TranslatePipe,
+    LucideUser,
+    LucideUsers,
+    LucideCalendar,
+    LucideWallet,
+    LucideArrowRight,
+  ],
   templateUrl: './ui-integrated.html',
   host: {
     class: 'block w-full',

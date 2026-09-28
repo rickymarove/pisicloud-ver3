@@ -175,4 +175,15 @@ describe('UiIntegratedComponent', () => {
     ctaButton.click();
     expect(spy).toHaveBeenCalled();
   });
+
+  it('renders Lucide icons for badge, avatar, sub-cards, and action buttons', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('svg[lucideUsers]')).toBeTruthy();
+    expect(compiled.querySelector('svg[lucideUser]')).toBeTruthy();
+    expect(compiled.querySelector('svg[lucideCalendar]')).toBeTruthy();
+    expect(compiled.querySelector('svg[lucideWallet]')).toBeTruthy();
+
+    const arrowIcons = compiled.querySelectorAll('svg[lucideArrowRight]');
+    expect(arrowIcons.length).toBe(3);
+  });
 });
