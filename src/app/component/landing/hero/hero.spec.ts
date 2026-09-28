@@ -40,6 +40,16 @@ describe('HeroComponent', () => {
         CTA_SECONDARY: 'Watch Video',
       },
     });
+    translateService.setTranslation('ko', {
+      HERO: {
+        TITLE_LINE1: '효율적인 HR 관리를',
+        BRAND: 'PISICloud',
+        TITLE_LINE2_SUFFIX: 'HRM과 함께',
+        SUBTITLE: '근태 관리부터 급여 정산까지, 모든 직원 관리 프로세스를 하나의 연결된 시스템에서 관리하세요.',
+        CTA_PRIMARY: '문의하기',
+        CTA_SECONDARY: '비디오 보기',
+      },
+    });
     translateService.use('id');
 
     fixture = TestBed.createComponent(HeroComponent);
@@ -125,6 +135,24 @@ describe('HeroComponent', () => {
     expect(subtitle.textContent).toContain('Manage the entire employee lifecycle');
     expect(primaryBtn.textContent?.trim()).toBe('Contact Us');
     expect(secondaryBtn.textContent?.trim()).toBe('Watch Video');
+  });
+
+  it('renders Korean translations correctly and handles responsive line wrapping', async () => {
+    translateService.use('ko');
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    const heading = fixture.nativeElement.querySelector('h1') as HTMLElement;
+    const lineSpans = heading.querySelectorAll(':scope > span');
+    expect(lineSpans.length).toBe(2);
+    expect(lineSpans[0].textContent).toContain('효율적인 HR 관리를');
+    expect(lineSpans[1].textContent).toContain('PISICloud HRM과 함께');
+
+    // Both lines should allow normal wrapping on mobile and nowrap on sm+ screens
+    expect(lineSpans[0].classList.contains('whitespace-normal')).toBe(true);
+    expect(lineSpans[0].classList.contains('sm:whitespace-nowrap')).toBe(true);
+    expect(lineSpans[1].classList.contains('whitespace-normal')).toBe(true);
+    expect(lineSpans[1].classList.contains('sm:whitespace-nowrap')).toBe(true);
   });
 
   it('renders the UI mockup component within the hero section', () => {
