@@ -37,37 +37,23 @@
   "UI_INTEGRATED": {
     "SECTION_TITLE": "Kendalikan bisnis dari satu tempat",
     "SECTION_SUBTITLE": "Pilih area yang ingin dilihat. Setiap proses terhubung ke data yang sama dan selalu dapat ditelusuri.",
-    "CARD_SYSTEM_TITLE": "Integrated HR System",
     "FLOATING_BADGE": {
-      "TITLE": "Employee Data",
       "SUBTITLE": "Data karyawan terpusat dalam satu sistem"
-    },
-    "PROFILE": {
-      "NAME": "Budi Marove",
-      "ROLE": "Software Engineer",
-      "NIK_LABEL": "NIK",
-      "EMPLOYEE_TYPE_LABEL": "Employee Type",
-      "EMPLOYEE_TYPE_VALUE": "Intern",
-      "STATUS_LABEL": "Status",
-      "STATUS_VALUE": "Active"
     },
     "SUB_CARDS": {
       "ATTENDANCE": {
-        "TITLE": "Attendance",
         "BULLET_1": "Check-in / Check-out",
         "BULLET_2": "Lembur",
         "BULLET_3": "Cuti & Izin",
         "ACTION": "Lihat Detail"
       },
       "PAYROLL": {
-        "TITLE": "Payroll",
         "BULLET_1": "Gaji Pokok",
         "BULLET_2": "Tunjangan",
         "BULLET_3": "Potongan",
         "ACTION": "Lihat Detail"
       },
       "HR": {
-        "TITLE": "HR",
         "BULLET_1": "Profil Karyawan",
         "BULLET_2": "Performance",
         "BULLET_3": "Dokumen",

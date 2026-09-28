@@ -35,39 +35,25 @@
     "CTA_SECONDARY": "Watch Video"
   },
   "UI_INTEGRATED": {
-    "SECTION_TITLE": "Control business from one place.",
+    "SECTION_TITLE": "Control business from one place",
     "SECTION_SUBTITLE": "Select the area you want to view. Every process connects to the same data and is always traceable.",
-    "CARD_SYSTEM_TITLE": "Integrated HR System",
     "FLOATING_BADGE": {
-      "TITLE": "Employee Data",
       "SUBTITLE": "Centralized employee data in one system"
-    },
-    "PROFILE": {
-      "NAME": "Budi Marove",
-      "ROLE": "Software Engineer",
-      "NIK_LABEL": "NIK",
-      "EMPLOYEE_TYPE_LABEL": "Employee Type",
-      "EMPLOYEE_TYPE_VALUE": "Intern",
-      "STATUS_LABEL": "Status",
-      "STATUS_VALUE": "Active"
     },
     "SUB_CARDS": {
       "ATTENDANCE": {
-        "TITLE": "Attendance",
         "BULLET_1": "Check-in / Check-out",
         "BULLET_2": "Overtime",
         "BULLET_3": "Leave & Permission",
         "ACTION": "View Details"
       },
       "PAYROLL": {
-        "TITLE": "Payroll",
         "BULLET_1": "Basic Salary",
         "BULLET_2": "Allowances",
         "BULLET_3": "Deductions",
         "ACTION": "View Details"
       },
       "HR": {
-        "TITLE": "HR",
         "BULLET_1": "Employee Profile",
         "BULLET_2": "Performance",
         "BULLET_3": "Documents",

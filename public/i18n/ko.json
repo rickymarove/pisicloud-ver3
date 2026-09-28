@@ -37,37 +37,23 @@
   "UI_INTEGRATED": {
     "SECTION_TITLE": "한 곳에서 비즈니스를 관리하세요",
     "SECTION_SUBTITLE": "확인할 영역을 선택하세요. 모든 프로세스가 동일한 데이터로 연결되어 항상 추적 가능합니다.",
-    "CARD_SYSTEM_TITLE": "Integrated HR System",
     "FLOATING_BADGE": {
-      "TITLE": "Employee Data",
       "SUBTITLE": "하나의 시스템에서 통합된 직원 데이터"
-    },
-    "PROFILE": {
-      "NAME": "Budi Marove",
-      "ROLE": "Software Engineer",
-      "NIK_LABEL": "NIK",
-      "EMPLOYEE_TYPE_LABEL": "Employee Type",
-      "EMPLOYEE_TYPE_VALUE": "Intern",
-      "STATUS_LABEL": "Status",
-      "STATUS_VALUE": "Active"
     },
     "SUB_CARDS": {
       "ATTENDANCE": {
-        "TITLE": "Attendance",
         "BULLET_1": "출퇴근 체크",
         "BULLET_2": "초과 근무",
         "BULLET_3": "휴가 및 신청",
         "ACTION": "자세히 보기"
       },
       "PAYROLL": {
-        "TITLE": "Payroll",
         "BULLET_1": "기본급",
         "BULLET_2": "수당",
         "BULLET_3": "공제",
         "ACTION": "자세히 보기"
       },
       "HR": {
-        "TITLE": "HR",
         "BULLET_1": "직원 프로필",
         "BULLET_2": "성과 관리",
         "BULLET_3": "문서 관리",

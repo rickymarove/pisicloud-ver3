@@ -20,37 +20,23 @@ describe('UiIntegratedComponent', () => {
       UI_INTEGRATED: {
         SECTION_TITLE: 'Kendalikan bisnis dari satu tempat',
         SECTION_SUBTITLE: 'Pilih area yang ingin dilihat. Setiap proses terhubung ke data yang sama dan selalu dapat ditelusuri.',
-        CARD_SYSTEM_TITLE: 'Integrated HR System',
         FLOATING_BADGE: {
-          TITLE: 'Employee Data',
           SUBTITLE: 'Data karyawan terpusat dalam satu sistem',
-        },
-        PROFILE: {
-          NAME: 'Ricky Kopken',
-          ROLE: 'Barista',
-          NIK_LABEL: 'NIK',
-          EMPLOYEE_TYPE_LABEL: 'Employee Type',
-          EMPLOYEE_TYPE_VALUE: 'Intern',
-          STATUS_LABEL: 'Status',
-          STATUS_VALUE: 'Active',
         },
         SUB_CARDS: {
           ATTENDANCE: {
-            TITLE: 'Attendance',
             BULLET_1: 'Check-in / Check-out',
             BULLET_2: 'Lembur',
             BULLET_3: 'Cuti & Izin',
             ACTION: 'Lihat Detail',
           },
           PAYROLL: {
-            TITLE: 'Payroll',
             BULLET_1: 'Gaji Pokok',
             BULLET_2: 'Tunjangan',
             BULLET_3: 'Potongan',
             ACTION: 'Lihat Detail',
           },
           HR: {
-            TITLE: 'HR',
             BULLET_1: 'Profil Karyawan',
             BULLET_2: 'Performance',
             BULLET_3: 'Dokumen',
@@ -116,11 +102,11 @@ describe('UiIntegratedComponent', () => {
     expect(firstNav.classList.contains('text-[#0B4D46]')).toBe(true);
   });
 
-  it('renders employee profile details (Ricky Kopken, Barista, NIK, Intern, Active)', () => {
+  it('renders employee profile details (Budi Marove, Software Engineer, NIK, Intern, Active)', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.textContent).toContain('Ricky Kopken');
-    expect(compiled.textContent).toContain('Barista');
-    expect(compiled.textContent).toContain('676767676767');
+    expect(compiled.textContent).toContain('Budi Marove');
+    expect(compiled.textContent).toContain('Software Engineer');
+    expect(compiled.textContent).toContain('123456789');
     expect(compiled.textContent).toContain('Intern');
     expect(compiled.textContent).toContain('Active');
   });
