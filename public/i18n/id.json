@@ -33,5 +33,61 @@
     "SUBTITLE": "Kelola seluruh proses pengelolaan karyawan dalam satu sistem yang terhubung, dari kehadiran hingga penggajian.",
     "CTA_PRIMARY": "Kontak Kami",
     "CTA_SECONDARY": "Lihat Video"
+  },
+  "FEATURE": {
+    "TITLE_PREFIX": "12 Fitur Utama",
+    "TITLE_BRAND": "PISICloud",
+    "SUBTITLE": "Kapabilitas yang saling terhubung untuk menjalankan proses operasional SDM dan menghasilkan informasi management yang konsisten.",
+    "LEARN_MORE": "Pelajari Selengkapnya",
+    "ITEMS": {
+      "ATTENDANCE_MACHINE": {
+        "TITLE": "Mesin Absensi & Biometrik",
+        "DESC": "Integrasi langsung dengan mesin absensi sidik jari, face recognition, dan RFID untuk sinkronisasi data kehadiran otomatis."
+      },
+      "ATTENDANCE": {
+        "TITLE": "Manajemen Kehadiran & Shift",
+        "DESC": "Pantau kehadiran karyawan, pengaturan jadwal kerja fleksibel, multi-shift, serta kalkulasi jam kerja harian secara akurat."
+      },
+      "COLLECTIVE_LEAVE": {
+        "TITLE": "Pengelolaan Cuti Bersama",
+        "DESC": "Pengaturan jadwal libur nasional dan cuti bersama perusahaan yang otomatis menyesuaikan kuota cuti tahunan karyawan."
+      },
+      "PERSONAL_LEAVE": {
+        "TITLE": "Pengajuan Cuti Pribadi",
+        "DESC": "Pengajuan cuti tahunan, cuti sakit, dan izin khusus secara online dengan approval berjenjang serta tracking sisa kuota otomatis."
+      },
+      "PERSONAL_ATTENDANCE": {
+        "TITLE": "Absensi Mandiri & GPS Mobile",
+        "DESC": "Kemudahan absensi mandiri karyawan melalui aplikasi mobile dengan verifikasi lokasi GPS dan swafoto anti-fraud."
+      },
+      "RECRUITMENT": {
+        "TITLE": "Rekrutmen & Onboarding",
+        "DESC": "Kelola seluruh proses rekrutmen mulai dari posting lowongan, seleksi kandidat, wawancara, hingga onboarding karyawan baru."
+      },
+      "COLLECTIVE_OVERTIME": {
+        "TITLE": "Lembur Bersama (Kolektif)",
+        "DESC": "Pembuatan Surat Perintah Lembur (SPL) massal per divisi atau proyek dengan kalkulasi tarif lembur otomatis sesuai regulasi."
+      },
+      "DATABASE_MANAGEMENT": {
+        "TITLE": "Database & Profil Karyawan",
+        "DESC": "Sentralisasi data master karyawan, riwayat karir, kontrak kerja, dokumen penting, dan struktur organisasi dalam satu database aman."
+      },
+      "EMPLOYEE_DATA_UPDATE": {
+        "TITLE": "Pembaruan Data Mandiri (ESS)",
+        "DESC": "Berdayakan karyawan untuk memperbarui informasi personal, rekening bank, kontak darurat, dan data keluarga secara mandiri."
+      },
+      "PAYROLL": {
+        "TITLE": "Penggajian & Payroll Otomatis",
+        "DESC": "Hitung gaji pokok, tunjangan, potongan BPJS, lembur, dan insentif secara otomatis serta cetak slip gaji digital terenkripsi."
+      },
+      "PERSONAL_OVERTIME": {
+        "TITLE": "Pengajuan Lembur Pribadi",
+        "DESC": "Pengajuan jam kerja lembur mandiri oleh karyawan dengan estimasi upah lembur instan dan persetujuan atasan langsung."
+      },
+      "YEARLY_TAX": {
+        "TITLE": "Pajak Tahunan & PPh 21",
+        "DESC": "Kalkulasi otomatis pajak penghasilan karyawan (PPh 21/26) skema TER terbaru, integrasi bukti potong 1721-A1, dan pelaporan tahunan."
+      }
+    }
   }
 }
