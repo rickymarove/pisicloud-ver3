@@ -10,8 +10,8 @@ export class TranslateServerLoader implements TranslateLoader {
 
   getTranslation(lang: string): Observable<Translation> {
     const possiblePaths = [
-      join(process.cwd(), 'dist/pisicloud-v3/browser/i18n', `${lang}.json`),
       join(process.cwd(), 'public/i18n', `${lang}.json`),
+      join(process.cwd(), 'dist/pisicloud-v3/browser/i18n', `${lang}.json`),
       join(process.cwd(), 'browser/i18n', `${lang}.json`),
     ];
 
