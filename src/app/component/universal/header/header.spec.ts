@@ -233,5 +233,12 @@ describe('HeaderComponent', () => {
         header.className.includes('rounded-t-')
     ).toBe(false);
   });
+
+  it('applies sticky positioning classes to the host element', () => {
+    const hostElement = fixture.nativeElement as HTMLElement;
+    expect(hostElement.classList.contains('sticky')).toBe(true);
+    expect(hostElement.classList.contains('top-0')).toBe(true);
+    expect(hostElement.classList.contains('z-50')).toBe(true);
+  });
 });
 
