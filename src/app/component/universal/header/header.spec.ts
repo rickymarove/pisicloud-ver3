@@ -240,5 +240,23 @@ describe('HeaderComponent', () => {
     expect(hostElement.classList.contains('top-0')).toBe(true);
     expect(hostElement.classList.contains('z-50')).toBe(true);
   });
+
+  it('renders mobile menu as an overlay with backdrop and closes on backdrop click', () => {
+    const toggle = fixture.nativeElement.querySelector('button[aria-controls="mobile-menu"]') as HTMLButtonElement;
+    toggle.click();
+    fixture.detectChanges();
+
+    const mobileMenu = fixture.nativeElement.querySelector('#mobile-menu') as HTMLElement;
+    expect(mobileMenu.classList.contains('absolute')).toBe(true);
+    expect(mobileMenu.classList.contains('top-full')).toBe(true);
+
+    const backdrop = fixture.nativeElement.querySelector('.fixed.inset-0.-z-10') as HTMLElement;
+    expect(backdrop).toBeTruthy();
+
+    backdrop.click();
+    fixture.detectChanges();
+
+    expect(component.isMobileMenuOpen).toBe(false);
+  });
 });
 
