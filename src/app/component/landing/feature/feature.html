@@ -1,0 +1,62 @@
+<section id="features" class="relative py-16 sm:py-20 md:py-24 lg:py-28 bg-[#F4FAF8]/60 overflow-hidden font-sans scroll-mt-20">
+  <!-- Subtle Background decorative elements -->
+  <div class="pointer-events-none absolute -top-32 right-1/4 h-96 w-96 rounded-full bg-[#D4EFE9]/30 blur-3xl" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute bottom-10 left-10 h-80 w-80 rounded-full bg-[#92E0B4]/20 blur-3xl" aria-hidden="true"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="font-sans font-extrabold text-[#182849] text-3xl sm:text-4xl md:text-5xl lg:text-[44px] tracking-tight leading-[1.2]">
+        <span>{{ 'FEATURE.TITLE_PREFIX' | translate }}</span>
+        <span class="text-[#0E6C5E] ml-2">{{ 'FEATURE.TITLE_BRAND' | translate }}</span>
+      </h2>
+      <p class="mt-4 sm:mt-5 text-sm sm:text-base md:text-[17px] text-[#4B5563] font-display leading-relaxed">
+        {{ 'FEATURE.SUBTITLE' | translate }}
+      </p>
+    </div>
+
+    <!-- Features Cards Grid -->
+    <div class="mt-12 sm:mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8 items-stretch">
+      <div
+        *ngFor="let item of features"
+        class="group bg-white rounded-3xl border border-gray-200/80 shadow-[0_4px_24px_-4px_rgba(24,40,73,0.06),0_2px_8px_-2px_rgba(24,40,73,0.03)] hover:shadow-[0_20px_40px_-12px_rgba(24,40,73,0.14)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col overflow-hidden"
+      >
+        <!-- Top Graphic Illustration Container -->
+        <div class="relative w-full h-56 sm:h-64 flex items-center justify-center p-6 bg-linear-to-b from-[#EBF7F4] via-[#F3FAF7]/80 to-[#F9FCFA]/30 overflow-hidden shrink-0">
+          <img
+            [src]="item.image"
+            [alt]="item.titleKey | translate"
+            width="400"
+            height="300"
+            loading="lazy"
+            class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105 select-none"
+          />
+        </div>
+
+        <!-- Card Content Body -->
+        <div class="p-6 sm:p-7 md:p-8 pt-4 sm:pt-5 flex flex-col flex-1 justify-between">
+          <div>
+            <h3 class="font-sans font-bold text-[#182849] text-xl sm:text-[22px] leading-snug tracking-tight group-hover:text-[#0E6C5E] transition-colors duration-200">
+              {{ item.titleKey | translate }}
+            </h3>
+            <p class="mt-3 text-sm sm:text-[15px] text-[#5A6A85] font-display leading-relaxed">
+              {{ item.descKey | translate }}
+            </p>
+          </div>
+
+          <!-- Bottom Action Button -->
+          <div class="mt-6 pt-2">
+            <a
+              [routerLink]="['/feature']"
+              [queryParams]="{ feature: item.slug }"
+              (click)="onLearnMore(item)"
+              class="inline-flex items-center justify-center px-5.5 py-2.5 rounded-xl bg-[#2D73E6] hover:bg-[#1E5DC8] text-white font-sans text-sm sm:text-[15px] font-semibold shadow-xs hover:shadow-md active:scale-[0.98] transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2D73E6]"
+            >
+              {{ 'FEATURE.LEARN_MORE' | translate }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

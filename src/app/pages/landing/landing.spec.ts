@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { provideTranslateService } from '@ngx-translate/core';
+import { provideRouter } from '@angular/router';
 import { Landing } from './landing';
 
 describe('Landing', () => {
@@ -12,6 +12,7 @@ describe('Landing', () => {
       imports: [Landing],
       providers: [
         provideTranslateService({ fallbackLang: 'id', lang: 'id' }),
+        provideRouter([]),
       ],
     }).compileComponents();
 
@@ -24,7 +25,7 @@ describe('Landing', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render app-hero, app-ui-integrated, and app-feature components', () => {
+  it('renders hero, ui-integrated, and feature sections', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('app-hero')).toBeTruthy();
     expect(compiled.querySelector('app-ui-integrated')).toBeTruthy();

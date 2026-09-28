@@ -68,5 +68,61 @@
       "DESCRIPTION": "From attendance to payroll and employee management, PISICloud helps simplify administrative processes through an integrated system",
       "CTA_BUTTON": "View Details"
     }
+  },
+  "FEATURE": {
+    "TITLE_PREFIX": "12 Key Features of",
+    "TITLE_BRAND": "PISICloud",
+    "SUBTITLE": "Interconnected capabilities to streamline HR operations and deliver consistent management insights.",
+    "LEARN_MORE": "Learn More",
+    "ITEMS": {
+      "ATTENDANCE_MACHINE": {
+        "TITLE": "Attendance Machine & Biometrics",
+        "DESC": "Direct integration with fingerprint, face recognition, and RFID machines for automated real-time attendance syncing."
+      },
+      "ATTENDANCE": {
+        "TITLE": "Attendance & Shift Management",
+        "DESC": "Monitor employee attendance, configure flexible work schedules, multi-shift rosters, and track daily working hours accurately."
+      },
+      "COLLECTIVE_LEAVE": {
+        "TITLE": "Collective Leave Management",
+        "DESC": "Manage national holidays and collective company leave with automatic deduction and adjustment of annual leave quotas."
+      },
+      "PERSONAL_LEAVE": {
+        "TITLE": "Personal Leave & Balance",
+        "DESC": "Submit annual, sick, and special leave requests online with multi-level approval workflows and automated balance tracking."
+      },
+      "PERSONAL_ATTENDANCE": {
+        "TITLE": "Mobile Self-Clocking & GPS",
+        "DESC": "Convenient mobile attendance for remote and field employees with GPS geolocation and anti-fraud selfie verification."
+      },
+      "RECRUITMENT": {
+        "TITLE": "Recruitment & Onboarding",
+        "DESC": "End-to-end recruitment management from job postings, candidate screening, and interview scheduling to new hire onboarding."
+      },
+      "COLLECTIVE_OVERTIME": {
+        "TITLE": "Collective Overtime Orders",
+        "DESC": "Issue bulk overtime work orders per department or project with automated compliance-based overtime rate calculation."
+      },
+      "DATABASE_MANAGEMENT": {
+        "TITLE": "Employee Database & Profiles",
+        "DESC": "Centralize employee master data, career milestones, contracts, vital documents, and org charts in a secure database."
+      },
+      "EMPLOYEE_DATA_UPDATE": {
+        "TITLE": "Employee Self-Service (ESS)",
+        "DESC": "Empower employees to update personal details, bank accounts, emergency contacts, and family information independently."
+      },
+      "PAYROLL": {
+        "TITLE": "Automated Payroll Calculation",
+        "DESC": "Automatically calculate base salary, allowances, statutory deductions, overtime, and bonuses with encrypted digital payslips."
+      },
+      "PERSONAL_OVERTIME": {
+        "TITLE": "Personal Overtime Requests",
+        "DESC": "Self-service overtime submission by employees with instant overtime pay estimations and direct supervisor approval."
+      },
+      "YEARLY_TAX": {
+        "TITLE": "Yearly Tax & PPh 21 Calculation",
+        "DESC": "Automate employee income tax (PPh 21/26) withholding calculations, Form 1721-A1 generation, and year-end reporting."
+      }
+    }
   }
 }
