@@ -9,7 +9,7 @@ import { LanguageOption, LanguageService } from '../../../core/services/language
   imports: [CommonModule, TranslatePipe],
   templateUrl: './header.html',
   host: {
-    class: 'block relative z-30',
+    class: 'block sticky top-0 z-50',
   },
 })
 export class HeaderComponent {

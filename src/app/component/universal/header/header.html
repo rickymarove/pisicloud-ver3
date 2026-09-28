@@ -1,4 +1,8 @@
-<header class="w-full bg-white font-sans py-4 sm:py-4.5 rounded-b-4xl md:rounded-b-[15px] border-b border-x border-gray-200/70 shadow-[0_8px_24px_-4px_rgba(24,40,73,0.08),0_2px_8px_-2px_rgba(24,40,73,0.04)]">
+<header
+  class="relative w-full bg-white font-sans py-4 sm:py-4.5 border-b border-x border-gray-200/70 shadow-[0_8px_24px_-4px_rgba(24,40,73,0.08),0_2px_8px_-2px_rgba(24,40,73,0.04)] md:rounded-b-[15px] transition-[border-radius] duration-200"
+  [class.rounded-b-4xl]="!isMobileMenuOpen"
+  [class.rounded-b-none]="isMobileMenuOpen"
+>
   <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative flex items-center justify-between gap-4 md:gap-10">
     <a href="/" class="flex items-center shrink-0">
       <img
@@ -56,7 +60,20 @@
     </button>
   </div>
 
-  <div id="mobile-menu" [hidden]="!isMobileMenuOpen" class="border-t border-gray-100 md:hidden">
+  <!-- mobile menu backdrop overlay -->
+  <div
+    *ngIf="isMobileMenuOpen"
+    class="fixed inset-0 top-0 bg-[#0f0f19]/30 backdrop-blur-[2px] -z-10 md:hidden animate-fade-in motion-reduce:animate-none"
+    (click)="closeMobileMenu()"
+    aria-hidden="true"
+  ></div>
+
+  <!-- mobile menu dropdown overlay -->
+  <div
+    id="mobile-menu"
+    [hidden]="!isMobileMenuOpen"
+    class="absolute top-full left-0 right-0 z-40 bg-white border-b border-x border-gray-200/70 rounded-b-4xl shadow-[0_16px_36px_-4px_rgba(24,40,73,0.14)] md:hidden origin-top animate-dropdown motion-reduce:animate-none"
+  >
     <div class="max-w-7xl mx-auto px-4 sm:px-8 pt-3 pb-5">
       <nav class="flex flex-col" [attr.aria-label]="'HEADER.ARIA.MOBILE_NAV' | translate">
         <a
